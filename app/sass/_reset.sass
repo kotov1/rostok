@@ -1,0 +1,56 @@
+/* ----- bootstrap container ----- */
+@media (min-width: 768px)
+	.container
+		max-width: 768px
+
+@media (min-width: 992px)
+	.container
+		max-width: 960px
+
+@media (min-width: 1200px)
+	.container
+		max-width: 1246px
+
+::selection
+	background-color: $accent-color
+	color: #fff
+
+ul
+	margin: 0
+	padding-left: 0
+	list-style: none
+
+a
+	color: inherit
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		color: currentColor
+		
+
+input
+	width: 100%
+	border: none
+	outline: none
+
+*::placeholder
+	opacity: 1
+	font-family: $default-font
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #000
+body input:required:valid,
+body textarea:required:valid
+	color: #000
+
+/* ----- magnific popup ----- */
+// .mfp-bg
+// 	background-color: #fff
+// .mfp-container
+// 	padding: 0
+// 	left: 50%
+// 	transform: translateX(-50%)
+// .mfp-content
+// 	vertical-align: top
