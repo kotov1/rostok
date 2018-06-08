@@ -18,13 +18,13 @@ $(function() {
 	// при успешной отправке формы логина открываю меню пользователя
 	$('.header__auth-form form').submit(function(event) {
 		$('#login').removeClass('notLogged');
-		$('#login').addClass('logged');
+		$('#login, .header__bottom-line').addClass('logged');
 		$('.header__auth').removeClass('reveal');
 		event.preventDefault();
 	});
 	// имитирую выход из личного абинета
 	$('#exit-log').click(function(event) {
-		$('#login').removeClass('logged');
+		$('#login, .header__bottom-line').removeClass('logged');
 		$('#login').removeClass('opened');
 		$('#login').addClass('notLogged');
 		$('.header__account-line').removeClass('reveal');
@@ -73,16 +73,45 @@ $(function() {
 
 
 
-
-
-
-
+	// кастомный placeholder в окне поиска на мобильных устройствах
 	$('.header__mob-search-input').change(function() {
 		if( $(this).val() != 0 ) {
 			$(this).next('.placeholder').hide();
 		} else {
 			$(this).next('.placeholder').show();
 		}
+	});
+
+
+	$('.banners__slider').slick({
+		slidesToShow: 4,
+		infinite: false,
+		variableWidth: true,
+		responsive: [
+			{
+			breakpoint: 1200,
+			settings: {
+				arrows: true,
+				variableWidth: false,
+				infinite: true,
+				centerMode: true,
+				centerPadding: '100px',
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+			},
+			{
+			breakpoint: 768,
+			settings: {
+				infinite: true,
+				arrows: true,
+				variableWidth: true,
+				centerMode: true,
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+			}
+		]
 	});
 
 

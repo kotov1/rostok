@@ -35,6 +35,7 @@ body
 	margin: 0 auto
 	position: relative
 	font: 400 16px/1.65 $default-font
+	background-color: #f5f5f5
 	overflow-x: hidden
 
 .img-responsive
@@ -63,9 +64,17 @@ body.modal-active
 	.overlay
 		display: block
 
-.title
+h2
+	font-size: 1.125rem
+	line-height: 1.9
+
+.section__inner
 	position: relative
-	padding-bottom: 8px
+
+.title
+	margin: 0
+	position: relative
+	padding-bottom: 6px
 	&::before
 		content: ''
 		display: block
@@ -74,7 +83,7 @@ body.modal-active
 		position: absolute
 		left: 0
 		bottom: 0
-		background: linear-gradient(90deg, $accent-color 53px, rgba(#fff,0.4) 53px)
+		background: linear-gradient(90deg, $accent-color 53px, #d5d5d5 53px)
 		z-index: 0
 
 .btn
@@ -93,14 +102,97 @@ body.modal-active
 		transform: translate(1px, 1px)
 		transition: all .2s
 
+.more-box
+	position: absolute
+	top: 0
+	right: 0
+	z-index: 0
+	&::before
+		content: ''
+		display: block
+		width: 6px
+		height: 6px
+		position: absolute
+		top: 50%
+		right: 16px
+		margin-top: -3px
+		border-bottom: 1px solid $accent-color
+		border-right: 1px solid $accent-color
+		transform: rotate(-45deg)
+		transition: all .2s ease-in-out
+		transform-origin: 50% 0
+		z-index: 0
+	&:hover
+		&::before
+			right: 19px
+	&:active
+		&::before
+			right: 16px
+.more-link
+	display: block
+	min-width: 206px
+	padding: 13px 20px
+	font-size: 12px
+	line-height: 14px
+	font-weight: 300
+	color: #c4c4c4
+	background-color: #303030
+	&:hover
+		color: #c4c4c4
+
+
+
+
 
 
 /* ----- x ----- */
 .ml-auto
 	margin-left: auto
-.p-s
+.p-static
 	position: static
 	
+
+/* ----- slick slider reset ----- */
+.slick-slide
+	outline: none
+
+.slick-prev, .slick-next
+	font-size: 0
+	line-height: 0
+	position: absolute
+	top: 50%
+	display: block
+	width: 20px
+	height: 32px
+	padding: 0
+	transform: translate(0, -50%)
+	cursor: pointer
+	color: transparent
+	border: none
+	outline: none
+	background: url('../img/icons/slider-arrows.png') no-repeat
+	opacity: .8
+	z-index: 1
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover, .slick-next:focus
+	opacity: 1
+	color: transparent
+	outline: none
+.slick-prev
+	left: 15px
+	background-position: 0 0
+.slick-next
+	right: 15px
+	background-position: 100% 0
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled
+	opacity: .1
+
+
+
+
+
 
 
 
@@ -109,7 +201,6 @@ body.modal-active
  ------------------------------------- */
 .header
 	position: relative
-	// .container
 		
 	/* ----- header__top-line ----- */
 	&__top-line
@@ -201,6 +292,8 @@ body.modal-active
 	&__bottom-line
 		padding: 12px 0
 		background-color: #303030
+		&.logged
+			margin-bottom: 40px
 
 	/* ----- mob-search ----- */
 	&__mob
@@ -217,7 +310,6 @@ body.modal-active
 			&:active
 				box-shadow: 1px 1px 3px rgba(#fff,.2)
 				transition: all .2s
-					
 			&-ic
 				width: 16px
 				height: 16px
@@ -280,12 +372,12 @@ body.modal-active
 				transform: scale(0)
 				transform-origin: 50% 0
 				transition: all .2s
+				z-index: 3
 				&.reveal
 					visibility: visible
 					transform: scale(1)
 					transition: all .2s
 				
-
 	/* ----- cart ----- */
 	&__cart
 		display: flex
@@ -321,8 +413,6 @@ body.modal-active
 			text-transform: uppercase
 		&-btn
 			display: none
-
-		
 
 	/* ----- login ----- */
 	&__login
@@ -410,7 +500,6 @@ body.modal-active
 						opacity: 1
 						transition: all .2s
 
-
 	&__auth
 		visibility: hidden
 		transform: scale(0)
@@ -424,6 +513,7 @@ body.modal-active
 		right: 0
 		z-index: 1
 		transition: all .2s
+		z-index: 3
 		&.reveal
 			visibility: visible
 			transform: scale(1)
@@ -530,32 +620,282 @@ body.modal-active
 		&-cont
 			background-image: url('../img/icons/nav/cont.svg')
 		
+
+
+
+
+
+
+
+
+
+/* ------------------------------------- 
+	banners
+ ------------------------------------- */
+.banners
+	padding: 30px 0
+	background-color: #e4e4e4	
+
+	&__slide
+		width: 281px
+		height: 200px
+		margin: 0 15px
+		overflow: hidden
+		&:first-child
+			margin-left: 0
+		&:last-child
+			margin-right: 0
+		&:hover
+			.banners__text-1
+				background-color: #262626
+				transition: all .2s
+			.banners__text-2
+				background-color: $accent-color
+				transition: all .2s
+		&.bottom-left
+			.banners__text-block
+				max-width: 55%
+				bottom: 0
+				left: 0
+		&.top-left
+			.banners__text-block
+				top: 0
+				left: 0
+			.banners__text-1
+				font-size: 1.5rem
+			.banners__text-2
+				font-size: 1.125rem
+		&.bottom-center
+			.banners__text-block
+				width: 100%
+				text-align: center
+				bottom: 0
+				left: 0
+			.banners__text
+				display: block
+			.banners__text-1
+				font-size: 1.5rem
+			.banners__text-2
+				font-size: 1.125rem
+
+		&-box
+			position: relative
+			width: 100%
+			height: 100%
+
+	&__img
+		display: block
+		max-width: 100%
+		height: auto
+	&__text-block
+		position: absolute
+	&__text
+		display: inline-block
+		padding: 6px 20px
+		color: #fff
+		text-transform: uppercase
+		&-1
+			font-size: 1.125rem
+			background-color: rgba(#262626, .7)
+			transition: all .2s
+		&-2
+			font-size: 1rem
+			background-color: rgba($accent-color, .9)
+			transition: all .2s
+
+
+/* ------------------------------------- 
+	categories
+ ------------------------------------- */
+.categories
+	padding-top: 50px
+
+	&__block
+		display: flex
+		margin-top: 30px
+	&__item
+		flex: 0 0 25%
+		max-width: 25%
+		padding: 26px 30px
+		background: $accent-color
+		display: flex
+		align-items: center
+		border-right: 1px solid #f5f5f5
+		transition: background .2s
+		&:last-child
+			border-right: none
+		&:hover
+			background: darken($accent-color, 7%)
+			transition: background .2s
+	&__img
+		display: flex
+		justify-content: center
+		width: 48px
+		height: 48px
+		margin-right: 21px
+		img
+			height: 100%
+	&__descr
+		color: #fff
+		font-size: 12px
+		font-weight: 600
+		line-height: 14px
+		text-transform: uppercase
+
+
+/* ------------------------------------- 
+	brands
+ ------------------------------------- */
+.brands
+	padding: 50px 0 100px
+	&__items
+		margin-top: 30px
+		border: 1px solid #d5d5d5
+		border-bottom: none
+
+	&__item
+		height: 100px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-right: 1px solid #d5d5d5
+		border-bottom: 1px solid #d5d5d5
+		&:nth-child(6n)
+			border-right: none
+	&__logo
+		width: 100px
+		height: 80px
+		background-image: url('../img/brands/brands.png') 
+		background-repeat: no-repeat
+		&:hover
+			background-image: url('../img/brands/brands-active.png')
 			
+		&-1
+			background-position: -14px -22px
+		&-2
+			background-position: -214px -20px
+		&-3
+			background-position: -419px -20px
+		&-4
+			background-position: -621px -20px
+		&-5
+			background-position: -824px -23px
+		&-6
+			background-position: -1025px -23px
+		&-7
+			background-position: -14px -127px
+		&-8
+			background-position: -213px -124px
+		&-9
+			background-position: -418px -122px
+		&-10
+			background-position: -418px -122px
+		&-11
+			background-position: -824px -125px
+		&-12
+			background-position: -1025px -118px
+		&-13
+			background-position: -14px -227px
+		&-14
+			background-position: -216px -224px
+		&-15
+			background-position: -419px -227px
+		&-16
+			background-position: -619px -227px
+		&-17
+			background-position: -822px -226px
+		&-18
+			background-position: -1027px -225px
+
+
+
+/* ------------------------------------- 
+	interaction
+ ------------------------------------- */
+.interaction
+	background-color: #303030
+	border-bottom: 1px solid rgba(#fafafa ,.1)
+
+	&__form
+		padding: 22px 0 48px
+		&-label
+			padding-top: 6px
+			padding-left: 9px
+			font: 600 12px/14px $default-font
+			color: #e3e3e3
+			display: flex
+			align-items: center
+			&-track
+				padding-left: 23px
+		&-ic
+			display: inline-block
+			max-width: 32px
+			flex: 0 0 32px
+			height: 32px
+			margin-right: 15px
+			background-repeat: no-repeat
+			background-size: 100% auto
+			background-position: 0 50%
+			&-send
+				background-image: url('../img/icons/mail_send.svg')
+			&-track
+				background-image: url('../img/icons/route.svg')
+
+		&-input
+			padding: 17.5px 20px
+			flex: 0 0 250px
+			max-width: 250px
+			height: 50px
+			background: rgba(#fafafa, .05)
+			caret-color: rgba(#fff, .5)
+			font: 12px $default-font
+			font-weight: 400
+			color: rgba(#fff, .8)
+			&:focus
+				box-shadow: inset 0 -3px 10px rgba(#fff, .05)
+				transition: all .2s
+			&::placeholder
+				font: 12px $default-font
+				font-weight: 300
+				color: #8a8a8a
+			&:focus:required:invalid
+				color: rgba(#fff, .8)
+			&:focus:required:valid
+				color: rgba(#fff, .8)
+
+		&-btn
+			flex: 0 0 50px
+			max-width: 50px
+			height: 50px
+
+		&-info
+			position: relative
+			top: 10px
+			flex: 0 0 100%
+			max-width: 300px
+			padding-left: 21px
+			color: #828282
+			font-size: 12px
+			font-weight: 300
+			line-height: 14px
+			&-ic
+				display: inline-block
+				width: 12px
+				height: 12px
+				margin-right: 3px
+				background: url('../img/icons/alert.png') no-repeat 50% 50%
+
+	.border-divider
+			border-right: 1px solid rgba(#fafafa ,.1)
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer
+	background-color: #303030
+	height: 300px
 
 
 
