@@ -104,6 +104,9 @@ h2
 		cursor: pointer
 		background: darken($accent-color, 5%)
 		transition: all .2s
+	&:focus
+		outline: none
+		box-shadow: 1px 1px 3px rgba($accent-color, .5)
 	&:active
 		transform: translate(1px, 1px)
 		transition: all .2s
@@ -329,10 +332,11 @@ h2
 				box-shadow: 1px 1px 3px rgba(#fff,.2)
 				transition: all .2s
 			&-ic
-				width: 16px
-				height: 16px
+				display: block
+				width: 40px
+				height: 40px
 				background: url('../img/icons/search_white.svg') no-repeat 50% 50%
-				background-size: 100%
+				background-size: 16px 16px
 			&-title
 				margin: 0 0 30px
 				color: #cdcdcd
@@ -788,41 +792,41 @@ h2
 			background-image: url('../img/brands/brands-active.png')
 			
 		&-1
-			background-position: -14px -22px
+			background-position: -14px -22px // acura
 		&-2
-			background-position: -214px -20px
+			background-position: -214px -20px // alfa
 		&-3
-			background-position: -419px -20px
+			background-position: -419px -20px // audi
 		&-4
-			background-position: -621px -20px
+			background-position: -621px -20px // bmw
 		&-5
-			background-position: -824px -23px
+			background-position: -824px -23px // cadillac
 		&-6
-			background-position: -1025px -23px
-		&-7
-			background-position: -14px -127px
+			background-position: -1025px -23px //chery
+		&-7	
+			background-position: -14px -127px // chevrolet
 		&-8
-			background-position: -213px -124px
+			background-position: -213px -124px // chrysler
 		&-9
-			background-position: -418px -122px
+			background-position: -418px -122px // citroen
 		&-10
-			background-position: -418px -122px
+			background-position: -621px -122px // daewoo
 		&-11
-			background-position: -824px -125px
+			background-position: -824px -125px //dodge
 		&-12
-			background-position: -1025px -118px
+			background-position: -1025px -118px // fiat
 		&-13
-			background-position: -14px -227px
+			background-position: -14px -227px // ford
 		&-14
-			background-position: -216px -224px
+			background-position: -216px -224px // geely
 		&-15
-			background-position: -419px -227px
+			background-position: -419px -227px // great wall
 		&-16
-			background-position: -619px -227px
+			background-position: -619px -227px // honda
 		&-17
-			background-position: -822px -226px
+			background-position: -822px -226px // hyundai
 		&-18
-			background-position: -1027px -225px
+			background-position: -1027px -225px // infinity
 
 
 
@@ -977,19 +981,234 @@ h2
 /* ------------------------------------- 
 
 
-	page contacts
+	page__results
 
  ------------------------------------- */
+.results
+	padding: 50px 0 100px
+	&__title
+		position: relative
+		&-brand
+			width: 44px
+			height: 44px
+			position: absolute
+			right: 0
+			bottom: 0
+			background-color: #f5f5f5
+
+.table
+	width: 100%
+	margin-top: 30px
+	border-collapse: collapse
+	font-family: $default-font
+	th
+		padding: 0.9285714285714286em 2.071428571428571em
+		text-align: left
+		background-color: #303030
+		font-size: 14px
+		border: 1px solid #d5d5d5
+		line-height: 24px
+		font-weight: 600
+		color: #fafafa
+	td
+		background-color: #fafafa
+		padding: 10px 29px
+		font-size: 14px
+		border: 1px solid #d5d5d5
+		vertical-align: top
+	td:first-child
+		width: 128px
+		text-align: center
+		vertical-align: middle
+		padding-left: 0
+		padding-right: 0
+	td:nth-child(2)
+		width: 146px
 
 
+	&-filter
+		width: 162px
+		&:hover
+			cursor: pointer
+		.table-filter-arrow
+			display: inline-block
+			margin-bottom: 2px
+		.table-filter-top
+			border-left: 4.5px solid transparent
+			border-right: 4.5px solid transparent
+			border-bottom: 5px solid #d5d5d5
+			&.active
+				border-bottom-color: $accent-color
+		.table-filter-bottom
+			border-top: 5px solid #d5d5d5
+			border-left: 4.5px solid transparent
+			border-right: 4.5px solid transparent
+			&.active
+				border-top-color: $accent-color
 
+	&-info
+		display: inline-block
+		width: 100%
+		color: $table-accent-color
+		font-weight: 700
 
+	&-number
+		display: inline-block
+		width: 100%
+		font-weight: 600
+		color: $table-color
 
+	&-search
+		margin-top: 5px
+		font-size: 12px
+		&-text
+			display: inline-block
+			width: 100%
+			color: #9a9a9a
+		&-result
+			display: inline-block
+			width: 100%
+			line-height: 1
+			font-weight: 600
+			color: $table-accent-color
 
+	&-item
+		display: inline-block
+		width: 100%
+		font-weight: 300
+		color: $table-accent-color
 
+	&-item-dest
+		display: inline-block
+		margin-top: 15px
+		font-style: italic
+		font-weight: 400
+		color: $table-color
+		i
+			font-weight: 700
+			color: $table-accent-color
+	&-analogue
+		margin-top: 15px
+		display: flex
+		align-items: center
+		&-ic
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 25px
+			height: 25px
+			border: 2px solid $table-color
+			border-radius: 50%
+			background-color: #fafafa
+			transition: all .2s
+			&:hover
+				border-color: $accent-color
+				cursor: pointer
+				transition: all .2s
+		&-info
+			margin-right: 8px
+			font-weight: 700
+			font-size: 18px
+			color: $table-color
+			&:hover
+				color: $accent-color
+		&-car
+			svg
+				display: block
+				width: 15px
+				height: 12px
+			.cls-1
+				fill: $table-color
+			&:hover
+				.cls-1
+					fill: $accent-color
+					transition: all .2s
+		&-text
+			margin-left: 15px
+			font-size: 12px
+			font-weight: 400
+			line-height: 18px
+			color: $table-color
+			transition: all .2s
+			&:hover
+				color: $accent-color
+				cursor: pointer
+				transition: all .2s
 
+	&-price
+		color: $table-accent-color
+		font-size: 16px
+		font-weight: 600
+		line-height: 24px
+		text-align: right
+		&-status
+			display: inline-block
+			color: #f33f2e
+			font-size: 12px
+			font-weight: 400
+			line-height: 18px
+			&:hover
+				color: darken(#f33f2e, 15%)
+				transition: color .2s
 
+	&-quantity
+		&-status
+			font-size: 12px
+			font-weight: 400
+			line-height: 24px
+			text-align: right
+			color: #3a3a3a
+			&--available
+				color: #7eb105
 
+		&-result
+			margin-top: 5px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			width: 104px
+			&-input
+				display: inline-block
+				width: 42px
+				height: 30px
+				border: none
+				outline: none
+				font: 14px $default-font
+				color: $table-accent-color
+				background-color: #fafafa
+				text-align: center
+				vertical-align: middle
+				padding-top: 4px
+				border: 1px solid #d5d5d5
+				&::placeholder
+					color: #d5d5d5
+			.minus, .plus
+				width: 32px
+				height: 30px
+				font-size: 22px
+				line-height: 30px
+				color: #d5d5d5
+				border: 1px solid #d5d5d5
+				vertical-align: middle
+				text-align: center
+				transition: color .2s
+				&:hover
+					cursor: pointer
+					color: $accent-color
+					transition: color .2s
+				&::selection
+					background: transparent
+					color: #d5d5d5
+			.minus
+				margin-right: -1px
+				line-height: 26px
+			.plus
+				margin-left: -1px
+	&-addCart
+		width: 104px
+		margin-top: 8px
+		padding: 4px
+		font-size: 12px
 
 
 /* ------------------------------------- 

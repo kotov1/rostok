@@ -97,7 +97,7 @@
 					&:hover
 						color: $accent-color
 
-		/* ----- navigation ----- */
+	/* ----- navigation ----- */
 	.nav
 		&__toggle
 			display: flex
@@ -227,9 +227,65 @@
 	/* ------------------------------------- 
 
 
-		page contacts
+		page__results
 
 	 ------------------------------------- */
+	.table
+		display: block
+		position: relative
+		padding-top: 60px
+
+		tr:first-child .table-filter
+			padding: 8px 10px 8px 29px
+			position: absolute
+			top: 0
+			width: 150px
+			background: #fff
+			color: #303030
+			display: flex
+			align-items: center
+			.table-filter
+				margin: 0
+			.table-filter-top
+				margin: 0 0 0 auto
+		tr:first-child .table-filter1
+			right: 170px
+		tr:first-child .table-filter2
+			right: 0
+
+		tr
+			display: flex
+			width: 100%
+			&:not(:first-child)
+				position: relative
+				.table-filter
+					display: none
+		td, th
+			display: block
+		th
+			width: 101%
+			margin: -2px
+		td
+			min-height: 192px
+			margin: -1px
+		td:first-child
+			flex: 0 0 128px
+			max-width: 128px
+
+		.table-price
+			min-height: 1px
+			width: 100px
+			position: absolute
+			right: 40px
+			top: 40px
+			border: none
+			background: transparent
+			padding: 0
+			font-size: 18px
+		.table-quantity
+			flex: 0 0 180px
+			max-width: 180px
+			padding: 63px 40px 30px
 	
 
 
@@ -299,8 +355,34 @@
 
 
 
+	/* ------------------------------------- 
 
 
+		page__results
+
+	 ------------------------------------- */
+	.table
+		.table-img
+			padding-top: 23px
+		td.table-advance
+			min-height: 1px
+			width: 355px
+			position: absolute
+			left: 142px
+			top: 19px
+			border: none
+			background: transparent
+			padding: 0
+		.table-main-info
+			padding: 75px 14px 30px
+		.table-item
+			letter-spacing: -.4px
+		.table-item-dest
+			margin-top: 0
+		.table-search-text, .table-search-result
+			width: auto
+		.table-search-text
+			margin-right: 5px
 
 
 
@@ -321,6 +403,8 @@
 	/* ------------------------------------- 
 		Common styles
  	------------------------------------- */
+	.title
+		line-height: 1.4
 	.more-box
 		position: relative
 		margin-top: 30px
@@ -367,10 +451,12 @@
 			background-color: $accent-color
 			border-color: $accent-color
 	.header__cart-ic
-		width: 16px
-		height: 16px
+		display: block
+		width: 40px
+		height: 40px
 		margin-right: 0
 		background-image: url('../img/icons/cart_white.svg')
+		background-size: 16px 16px
 	.header__cart-box
 		position: absolute
 		top: 49px
@@ -590,9 +676,84 @@
 
 
 
+	/* ------------------------------------- 
 
 
+		page__results
 
+	 ------------------------------------- */
+
+	.result-number
+		display: block
+	.table
+		tr:not(.table-title)
+			padding: 25px 20px 20px
+			flex-wrap: wrap
+			border: 1px solid #d5d5d5
+			margin-bottom: -1px
+		tr:first-child .table-filter
+			width: 135px
+			padding: 8px 20px
+		tr:first-child .table-filter1
+			right: 155px
+		tr:first-child .table-filter2
+			right: 0
+		th, td
+			border: none
+			margin: 0
+		th
+			width: 
+		td
+			width: 100%
+			min-height: 1px
+		td.table-advance, .table-price
+			position: static
+			background: #fafafa
+
+		td.table-img, td.table-advance,
+			width: 100%
+			flex: 0 0 50%
+			max-width: 50%
+			padding: 0
+
+		.table-main-info
+			padding: 15px 0 0
+
+		.table-price, .table-quantity
+			min-height: 84px
+			margin-top: 20px
+			padding: 10px
+			flex: 0 0 50%
+			max-width: 50%
+			background-color: rgba(#d5d5d5, .7)
+			text-align: center
+		.table-quantity-result .minus, .table-quantity-result .plus, .table-quantity-result-input
+			background-color: #fafafa
+		.table-price
+			&--empty
+				flex: 0 0 100%
+				max-width: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+		.table-quantity
+			position: relative
+			display: flex
+			flex-direction: column
+			align-items: center
+			&--empty
+				flex: 0 0 0px
+				max-width: 0px
+				padding: 0
+		.table-quantity-status
+			width: 100%
+			position: absolute
+			bottom: 20px
+			left: -100%
+			text-align: center
+			
+
+			
 
 
 

@@ -9,8 +9,9 @@ $(function() {
 
 	function closeModal() {
 		$('.modal.reveal').removeClass('reveal');
-		$('.modal').find('.reveal').removeClass('reveal');
+		$('.reveal').removeClass('reveal');
 		$('.modal').closest('.opened').removeClass('opened');
+		console.log("closeModal");
 	};
 
 	// закрытие модальных окон по клику за их пределами
@@ -54,36 +55,36 @@ $(function() {
 
 
 	//  всплывающее окно поиска на мобильных устройствах
-	$('.header__mob-search').click(function() {
+	$('.header__mob-search-ic').click(function() {
 
 		if ( $('.header__mob-search').hasClass('opened') ) {
 			closeModal();
-			$(this).find('.header__mob-search-box').removeClass('reveal');
-			$(this).removeClass('opened');
+			$(this).next('.header__mob-search-box').removeClass('reveal');
+			$(this).parent('.header__mob-search').removeClass('opened');
 			bodyOverlay(false);
 		}
 		else {
 			closeModal();
-			$(this).find('.header__mob-search-box').addClass('reveal');
-			$(this).addClass('opened');
+			$(this).next('.header__mob-search-box').addClass('reveal');
+			$(this).parent('.header__mob-search').addClass('opened');
 			bodyOverlay(true);
 		}
 
 	});
 
 	//  всплывающее окно корзины на мобильных устройствах
-	$('.header__cart').click(function() {
+	$('.header__cart-ic').click(function() {
 
 		if ( $('.header__cart').hasClass('opened') ) {
 			closeModal();
-			$(this).find('.header__cart-box').removeClass('reveal');
-			$(this).removeClass('opened');
+			$(this).next('.header__cart-box').removeClass('reveal');
+			$(this).parent('.header__cart').removeClass('opened');
 			bodyOverlay(false);
 		}
 		else {
 			closeModal();
-			$(this).find('.header__cart-box').addClass('reveal');
-			$(this).addClass('opened');
+			$(this).next('.header__cart-box').addClass('reveal');
+			$(this).parent('.header__cart').addClass('opened');
 			bodyOverlay(true);
 		}
 
@@ -92,14 +93,14 @@ $(function() {
 
 	// ТЕСТОВЫЙ ЛОГИН
 	// открываю окно авторизации
-	$('#login').click(function() {
-		if( $(this).hasClass('notLogged') ) {
-			if( $(this).find('.header__auth').hasClass('reveal') ) {
-				$(this).find('.header__auth').removeClass('reveal');
+	$('.header__login-btn').click(function() {
+		if( $(this).parent('#login').hasClass('notLogged') ) {
+			if( $(this).next('.header__auth').hasClass('reveal') ) {
+				$(this).next('.header__auth').removeClass('reveal');
 				bodyOverlay(false);
 			} else {
 				closeModal();
-				$(this).find('.header__auth').addClass('reveal');
+				$(this).next('.header__auth').addClass('reveal');
 				bodyOverlay(true);
 			}
 		}
@@ -126,13 +127,25 @@ $(function() {
 
 	// открытие всплывающего окна меню пользователя на адптиве после успешной отправки формы логина
 	if( $(window).width() < 1200 ) {
-			$('#login').click(function(event) {
-				if( $(this).hasClass('logged') ) {
-					$(this).addClass('opened');
-					$('.header__account-line').addClass('reveal');
-					bodyOverlay(true);
-					event.preventDefault();
-				}
+			$('.header__login-btn').click(function(event) {
+
+				if( $(this).parent('#login').hasClass('logged') ) {
+
+					if( $(this).parent('#login').hasClass('opened') ) {
+						$(this).parent('#login').removeClass('opened');
+						$('.header__account-line').removeClass('reveal');
+						bodyOverlay(false);
+						event.preventDefault();
+					} else {
+						closeModal();
+						$(this).parent('#login').addClass('opened');
+						$('.header__account-line').addClass('reveal');
+						bodyOverlay(true);
+						event.preventDefault();
+					}
+
+				};
+
 			});
 
 			$('.header__account-line').click(function() {
@@ -142,6 +155,7 @@ $(function() {
 					bodyOverlay(false);
 				}
 			});
+			
 	};
 
 
@@ -220,7 +234,25 @@ $(function() {
 
 
 
-
+	// quantity plus minus
+	$(document).on('click', '.table-quantity .minus', function(){
+		var $_inp = $(this).parent().find('input');
+		$_inp.val( parseInt( $_inp.val() ) - 1 );
+		$_inp.trigger('propertychange');
+		return false;
+	});
+	$(document).on('click', '.table-quantity .plus', function(){
+		var $_inp = $(this).parent().find('input');
+		$_inp.val( parseInt( $_inp.val() ) + 1 );
+		$_inp.trigger('propertychange');
+		return false;
+	});
+	$('.table-quantity input').bind('input propertychange', function () {
+		var $this = $(this);
+		$this.val( $this.val().replace(/[^0-9]/gim, '') );
+		if ( $this.val().length == 0 || parseInt( $this.val() ) <= 0 )
+		$this.val(1);
+	});
 
 	
 
