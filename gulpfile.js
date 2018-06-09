@@ -37,7 +37,7 @@ gulp.task('js', function() {
 
 gulp.task('browser-sync', function() {
 	browserSync({
-		proxy: "rostok/index.php", // local server
+		proxy: "rostok/choose.php", // local server
 		// server: {
 		// 	baseDir: 'app'
 		// },

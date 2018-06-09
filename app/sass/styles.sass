@@ -50,7 +50,7 @@ body
 	text-align: center
 
 .overlay
-	display: none
+	// display: none
 	position: fixed
 	top: 0
 	left: 0
@@ -59,10 +59,16 @@ body
 	z-index: 10
 	overflow: hidden
 	background: #fff
-	opacity: 0.8
+	opacity: 0
+	visibility: hidden
+	z-index: 2
+	transition: all .2s
 body.modal-active
 	.overlay
-		display: block
+		// display: block
+		opacity: .8
+		visibility: visible
+		transition: all .4s
 
 h2
 	font-size: 1.125rem
@@ -140,7 +146,53 @@ h2
 	&:hover
 		color: #c4c4c4
 
+.scrollToTop
+	width: 48px
+	height: 48px
+	position: absolute
+	top: 22px
+	right: -48px
+	background: url('../img/scroll-btn.png') no-repeat 50% 50%
+	opacity: .8
+	transition: all .2s
+	&:hover
+		opacity: 1
+		cursor: pointer
+		transition: all .2s
+	&:active
+		transform: translate(1px, 1px)
+		transition: all .2s
 
+.page__main .footer .scrollToTop
+	display: none	
+		
+.breadcrumbs-wrap
+	margin-top: 30px
+.breadcrumbs
+	padding: 6px 30px
+	list-style: none
+	border: 1px solid #d5d5d5
+	> span
+		display: inline-block
+		line-height: 1.2
+		+ span:before
+			content: "»"
+			font-size: 18px
+			padding: 0 3px
+			color: $accent-color
+		a
+			font-size: 14px
+			font-weight: 300
+			color: #201d1e
+			&:hover
+				color: $accent-color
+		&:last-child
+			a
+				color: #9a9a9a
+				text-decoration: none
+				cursor: default
+				&:hover
+					color: #9a9a9a
 
 
 
@@ -152,42 +204,7 @@ h2
 	position: static
 	
 
-/* ----- slick slider reset ----- */
-.slick-slide
-	outline: none
 
-.slick-prev, .slick-next
-	font-size: 0
-	line-height: 0
-	position: absolute
-	top: 50%
-	display: block
-	width: 20px
-	height: 32px
-	padding: 0
-	transform: translate(0, -50%)
-	cursor: pointer
-	color: transparent
-	border: none
-	outline: none
-	background: url('../img/icons/slider-arrows.png') no-repeat
-	opacity: .8
-	z-index: 1
-.slick-prev:hover, .slick-prev:focus,
-.slick-next:hover, .slick-next:focus
-	opacity: 1
-	color: transparent
-	outline: none
-.slick-prev
-	left: 15px
-	background-position: 0 0
-.slick-next
-	right: 15px
-	background-position: 100% 0
-
-.slick-prev.slick-disabled,
-.slick-next.slick-disabled
-	opacity: .1
 
 
 
@@ -201,6 +218,7 @@ h2
  ------------------------------------- */
 .header
 	position: relative
+	z-index: 3
 		
 	/* ----- header__top-line ----- */
 	&__top-line
@@ -595,7 +613,6 @@ h2
 		transition: all .2s
 		&:hover
 			color: $accent-color
-			text-decoration: none
 			transition: all .2s
 			.nav__ic
 				opacity: 1
@@ -815,9 +832,12 @@ h2
 .interaction
 	background-color: #303030
 	border-bottom: 1px solid rgba(#fafafa ,.1)
+	.container
+		position: relative
+		
 
 	&__form
-		padding: 22px 0 48px
+		padding: 22px 0 32px
 		&-label
 			padding-top: 6px
 			padding-left: 9px
@@ -889,15 +909,77 @@ h2
 			border-right: 1px solid rgba(#fafafa ,.1)
 
 
-
-
-
-
+/* ------------------------------------- 
+	footer
+ ------------------------------------- */
 .footer
+	padding-top: 30px
 	background-color: #303030
-	height: 300px
+	.container
+		position: relative
+
+	&-title
+		margin: 0
+		font-size: .875rem
+		font-weight: 700
+		color: #e3e3e3
+	&-list
+		margin-top: 15px
+		li
+			line-height: 1.2
+			&.footer-list-margin
+				display: flex
+				align-items: center
+				justify-content: space-between
+				position: absolute
+				bottom: 30px
+				left: 15px
+
+	&-link
+		font-size: .75rem
+		font-weight: 300
+		color: #a0a0a0
+		transition: color .2s
+		&:hover
+			color: $accent-color
+			transition: color .2s
+		&.ml-25
+			margin-left: 25px
+	&-border
+		border-left: 1px solid $accent-color
+		margin-bottom: 30px
+
+	&__block
+		min-height: 212px
+		padding: 30px 15px
+		position: relative
+
+	&__bottom-line
+		padding: 19px 0
+		background-color: #262626
+		color: #656565
+		font-size: 12px
+		font-weight: 300
+		line-height: 18px
+		text-align: center
+		
+		.accent
+			margin-left: 2px
+			text-transform: uppercase
+			color: $accent-color
+		.divider
+			display: inline-block
+			margin: 0 4px
 
 
+				
+
+/* ------------------------------------- 
+
+
+	page contacts
+
+ ------------------------------------- */
 
 
 

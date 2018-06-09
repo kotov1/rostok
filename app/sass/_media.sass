@@ -3,9 +3,20 @@
 
 @media only screen and (max-width : 1199px)
 
+	/* ------------------------------------- 
+		Common styles
+ 		------------------------------------- */
 	.p-static
 		position: relative
-		
+
+	.interaction .scrollToTop
+		display: none
+	.footer .scrollToTop
+		display: block !important
+		right: 0
+		top: 0
+
+
 
 	/* ------------------------------------- 
 		header
@@ -138,7 +149,7 @@
 			padding: 30px 40px
 			background-color: #363636
 			opacity: .97
-			z-index: 2
+			z-index: 3
 			transition: all .2s
 			&::before
 				content: ''
@@ -195,13 +206,42 @@
 						bottom: 0
 						background: rgba(#fafafa ,.1)
 						z-index: 0
-					
+
 	.interaction__form
 		padding-bottom: 32px
 	.interaction__form-label
 		padding-left: 0
 		color: $accent-color
 			
+
+
+	/* ------------------------------------- 
+		footer
+	 ------------------------------------- */
+	.footer__block
+		padding: 20px 15px
+
+	
+
+
+	/* ------------------------------------- 
+
+
+		page contacts
+
+	 ------------------------------------- */
+	
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -259,6 +299,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 			
 	/**/
 
@@ -268,11 +320,14 @@
 	
 	/* ------------------------------------- 
 		Common styles
- 		------------------------------------- */
+ 	------------------------------------- */
 	.more-box
 		position: relative
 		margin-top: 30px
 		max-width: 206px
+
+	.footer .scrollToTop
+		right: 15px
 
 
 
@@ -469,8 +524,6 @@
 		brands
   	 ------------------------------------- */
 	.brands__item
-		// flex: 0 0 50%
-		// max-width: 50%
 		&:nth-child(4n)
 			border-right: 1px solid #d5d5d5
 		&:nth-child(2n)
@@ -489,6 +542,70 @@
 		flex: 1 0 240px
 	.interaction__form-info
 		padding-left: 0
+
+
+
+	/* ------------------------------------- 
+		footer
+	 ------------------------------------- */
+	.footer-border
+		border-left: none
+	.footer__block
+		min-height: 1px
+		padding: 15px 30px
+		border-left: 1px solid $accent-color
+	.footer-list li.footer-list-margin
+		position: static
+		margin-top: 30px
+	.footer__bottom-line
+		padding: 12px 0
+	.footer .divider
+		display: none
+	.footer .rights
+		display: block
+
+	.footer-title
+		position: relative
+		padding-left: 15px
+		&::before
+			content: ''
+			display: block
+			width: 8px
+			height: 8px
+			position: absolute
+			top: 50%
+			left: 0
+			margin-top: -4px
+			border-bottom: 2px solid  #828282
+			border-right: 2px solid  #828282
+			transform: rotate(-45deg)
+			transition: all .2s ease-in-out
+			transform-origin: 50% 50%
+			z-index: 0
+		&.active
+			&::before
+				transform: rotate(45deg)
+	.footer-list
+		display: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -523,10 +640,8 @@
 		right: 118px
 
 
-	/**/
 
 
 
-@media only screen and (max-width : 320px)
 
 	/**/

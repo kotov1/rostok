@@ -1,12 +1,4 @@
 /* ----- bootstrap container ----- */
-@media (min-width: 768px)
-	.container
-		max-width: 768px
-
-@media (min-width: 992px)
-	.container
-		max-width: 960px
-
 @media (min-width: 1200px)
 	.container
 		max-width: 1246px
@@ -37,7 +29,6 @@ input
 	opacity: 1
 	font-family: $default-font
 
-
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: #000
@@ -45,12 +36,40 @@ body input:required:valid,
 body textarea:required:valid
 	color: #000
 
-/* ----- magnific popup ----- */
-// .mfp-bg
-// 	background-color: #fff
-// .mfp-container
-// 	padding: 0
-// 	left: 50%
-// 	transform: translateX(-50%)
-// .mfp-content
-// 	vertical-align: top
+
+/* ----- slick slider reset ----- */
+.slick-slide
+	outline: none
+
+.slick-prev, .slick-next
+	font-size: 0
+	line-height: 0
+	position: absolute
+	top: 50%
+	display: block
+	width: 20px
+	height: 32px
+	padding: 0
+	transform: translate(0, -50%)
+	cursor: pointer
+	color: transparent
+	border: none
+	outline: none
+	background: url('../img/icons/slider-arrows.png') no-repeat
+	opacity: .8
+	z-index: 1
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover, .slick-next:focus
+	opacity: 1
+	color: transparent
+	outline: none
+.slick-prev
+	left: 15px
+	background-position: 0 0
+.slick-next
+	right: 15px
+	background-position: 100% 0
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled
+	opacity: .1
