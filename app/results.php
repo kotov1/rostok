@@ -60,13 +60,13 @@
 	<!-- results -->
 	<section class="table-section results">
 		<div class="container">
-			<h2 class="title results__title">Результаты поиска: <span class="result-number">123654789</span>
-				<img class="results__title-brand" src="img/brands/brand4.png" alt="brand">
+			<h2 class="title table__head">Результаты поиска: <span class="table__head-break">123654789</span>
+				<img class="table__head-brand" src="img/brands/brand4.png" alt="brand">
 			</h2>
 
-			<table class="table results__table">
+			<table class="table">
 				
-				<!-- category 1 head -->
+				<!-- category 1 title -->
 				<tr class="table-title">
 					<th colspan="3">Фильтр</th>
 					<th class="table-filter table-filter1">Цена 
@@ -76,7 +76,7 @@
 						<i class="table-filter-arrow table-filter-top"></i><i class="table-filter-arrow table-filter-bottom"></i>
 					</th>
 				</tr>
-				<!-- category 1 head -->
+				<!-- category 1 title -->
 
 				<!-- category 1 row 1 -->
 				<tr>
@@ -137,13 +137,13 @@
 				<!-- category 1 row 2 -->
 				
 
-				<!-- category 2 head -->
+				<!-- category 2 title -->
 				<tr class="table-title">
 					<th colspan="3">Компрессор</th>
 					<th class="table-filter"></th>
 					<th class="table-filter"></th>
 				</tr>
-				<!-- category 2 head -->
+				<!-- category 2 title -->
 
 				<!-- category 2 row 1 -->
 				<tr>
@@ -231,13 +231,13 @@
 				<!-- category 2 row 3 -->
 
 
-				<!-- category 3 head -->
+				<!-- category 3 title -->
 				<tr class="table-title">
 					<th colspan="3">Возможные аналоги</th>
 					<th class="table-filter"></th>
 					<th class="table-filter"></th>
 				</tr>
-				<!-- category 3 head -->
+				<!-- category 3 title -->
 
 				<!-- category 3 row 1 -->
 				<tr>
@@ -269,7 +269,7 @@
 				<!-- category 3 row 1 -->
 
 			</table>
-			<!-- /.results__table -->
+
 
 			<div class="table-purchase">Товар успешно добавлен в корзину</div>
 

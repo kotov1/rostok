@@ -33,34 +33,6 @@
 		<?php include("header.php");?>
 		<!-- /.header -->
 	
-
-		<!-- breadcrumbs -->
-		<!-- <div class="breadcrumbs-wrap">
-			<div class="container">
-				<div itemscope="" itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs">
-					<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-						<a rel="nofollow" itemprop="item" title="Главная" href="#">
-							<span itemprop="name">Главная</span>
-							<meta itemprop="position" content="1">
-						</a>
-						</span>
-						<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-						<a rel="nofollow" itemprop="item" title="Ремонт КПП" href="#">
-							<span itemprop="name">Ремонт</span>
-							<meta itemprop="position" content="2">
-						</a>
-						</span>
-						<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-						<a itemprop="item" title="Ремонт АКПП" href="#">
-							<span itemprop="name">Продажа и ремонт турбин</span>
-							<meta itemprop="position" content="3">
-						</a>
-					</span> 
-				</div>
-			</div>
-		</div> -->
-		<!-- /.breadcrumbs -->
-	
 	
 		<!-- banners -->
 		<div class="banners">
@@ -121,7 +93,7 @@
 		<section class="categories">
 			<div class="container">
 				<div class="section__inner">
-					<h2 class="title">Каталог</h2>
+					<h2 class="title categories__title">Каталог</h2>
 					<div class="categories__block">
 					
 						<a href="#" class="categories__item">
@@ -163,7 +135,7 @@
 			<div class="container">
 				<div class="section__inner">
 	
-					<h2 class="title">Поиск по марке</h2>
+					<h2 class="title brands__title">Поиск по марке</h2>
 	
 					<div class="brands__items row no-gutters">
 	

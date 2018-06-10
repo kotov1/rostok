@@ -45,7 +45,7 @@
 						</a>
 						</span>
 						<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-						<a rel="nofollow" itemprop="item" title="123654789" href="orders.php">
+						<a rel="nofollow" itemprop="item" title="Заказы" href="orders.php">
 							<span itemprop="name">Заказы</span>
 							<meta itemprop="position" content="2">
 						</a>
@@ -53,7 +53,7 @@
 						<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
 						<a rel="nofollow" itemprop="item" title="123654789" href="#">
 							<span itemprop="name">Заказ 123</span>
-							<meta itemprop="position" content="2">
+							<meta itemprop="position" content="3">
 						</a>
 						</span>
 						<i class="breadcrumbs-back"></i>
@@ -66,11 +66,11 @@
 	<!-- orders -->
 	<section class="table-section orders">
 		<div class="container">
-			<h2 class="title orders__title">Заказ 123 от 27.04.2018</h2>
+			<h2 class="title table__head">Заказ 123 от 27.04.2018</h2>
 
 			<table class="table orders__table">
 				
-				<!-- category 1 head -->
+				<!-- category 1 title -->
 				<tr class="table-title">
 					<th colspan="3"></th>
 					<th class="table-filter table-filter1">Цена 
@@ -80,7 +80,7 @@
 						<i class="table-filter-arrow table-filter-top"></i><i class="table-filter-arrow table-filter-bottom"></i>
 					</th>
 				</tr>
-				<!-- category 1 head -->
+				<!-- category 1 title -->
 
 				<!-- category 1 row 1 -->
 				<tr>
@@ -133,7 +133,6 @@
 				<!-- category 1 sum -->
 
 			</table>
-			<!-- /.orders__table -->
 
 
 		</div>

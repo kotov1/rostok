@@ -27,7 +27,7 @@
 
 <body>
 	
-	<div class="page page__cart">	
+	<div class="page page__ordering">	
 
 		<!-- header -->
 		<?php include("header.php");?>
@@ -138,15 +138,7 @@
 				
 				
 				</table>
-				<!-- /.cart__table -->
 
-				<div class="table-count">
-					<div class="table-sum">199,90 €</div>
-					<div class="table-count-btn-wrap">
-						<button type="button" class="btn table-count-btn table-count-btn--black">Пересчитать</button>
-					</div>
-				</div>
-				<!-- /.cart__table-count -->
 
 			</div>
 			<!-- /.cart__table-wrap -->
@@ -155,51 +147,59 @@
 
 			<div class="forms">
 				<div class="row">
-					<div class="col-12 col-md-6 col-lg-5 mb-50">
-						<h3 class="title forms__title">Авторизация</h3>
-						<div class="form">
+					<div class="col-12 mb-50">
+						<h3 class="title forms__title ordering-form-title">Персональные данные</h3>
+						<div class="form ordering__form">
 							<form action="#">
 								<label class="form-label">
-									<input type="email" class="form-input" name="email" placeholder="Введите ваш E-mail" required>
-									<small class="form-hint">E-mail</small>
-								</label>
-								<label class="form-label">
-									<input type="password" class="form-input" name="password" required>
-									<small class="form-hint">Пароль</small>
-								</label>
-								<div class="form-footer">
-									<div class="row align-items-center">
-										<div class="col-auto"><input type="submit" class="btn form-btn" value="Вход"></div>
-										<div class="col-auto d-flex justify-content-center"><a href="#" class="form-remind">Забыли пароль</a></div>
-									</div>
-								</div>
-							</form>
-						</div>
-						<!-- /.form -->
-					</div>
-					<div class="col-12 col-md-6 col-lg-5 offset-lg-1">
-						<h3 class="title forms__title">Регистрация</h3>
-						<div class="form">
-							<form action="#">
-								<label class="form-label">
-									<input type="text" class="form-input" name="name" placeholder="Введите имя" required>
+									<input type="text" class="form-input" name="email" placeholder="Иван Петров" required>
 									<small class="form-hint">Имя</small>
 								</label>
 								<label class="form-label">
-									<input type="email" class="form-input" name="email" placeholder="Введите ваш E-mail" required>
+									<input type="email" class="form-input" name="email" placeholder="ivan@petrov.ru" required>
 									<small class="form-hint">E-mail</small>
 								</label>
 								<label class="form-label">
-									<input type="password" class="form-input" name="password" required>
-									<small class="form-hint">Пароль</small>
+									<input type="text" class="form-input" name="company" placeholder="Рога и Копыта" required>
+									<small class="form-hint">Компания</small>
 								</label>
 								<label class="form-label">
-									<input type="password" class="form-input" name="password-confirm" required>
-									<small class="form-hint">Повторите пароль</small>
+									<input type="text" class="form-input" name="delivery-address" placeholder="Таллинн, Петербургское шоссе, 1" required>
+									<small class="form-hint">Адрес доставки</small>
 								</label>
-								<div class="form-footer">
-									<input type="submit" class="btn form-btn" value="Регистрация">
+
+								<div class="form__delivery">
+									<h4 class="form__delivery-title">Способ доставки</h4>
+									<ul class="form__delivery-type">
+										<li>
+											<input type="radio" name="delivery-type" value="A-Rostok" id="delivery1">
+											<label for="delivery1" class="form__delivery-label">
+												<span class="form__delivery-descr">Транспорт A-Rostok - 20 €</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="delivery-type" value="DPD" id="delivery2">
+											<label for="delivery2" class="form__delivery-label">
+												<span class="form__delivery-descr">DPD - 30 €</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="delivery-type" value="pickup" id="delivery3">
+											<label for="delivery3" class="form__delivery-label">
+												<span class="form__delivery-descr">Самовывоз - 0 €</span>
+											</label>
+										</li>
+									</ul>
 								</div>
+
+								<div class="table-count ordering__table-count">
+									<div class="table-sum">199,90 €</div>
+									<div class="table-count-btn-wrap">
+										<button type="submit" class="btn table-count-btn table-count-btn--white">Далее</button>
+									</div>
+								</div>
+								<!-- /.cart__table-count -->
+
 							</form>
 						</div>
 						<!-- /.form -->
@@ -231,7 +231,7 @@
 
 
 		</div>
-		<!-- /.page__cart -->
+		<!-- /.page__ordering -->
 
 
 

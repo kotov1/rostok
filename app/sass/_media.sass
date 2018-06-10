@@ -322,20 +322,34 @@
 	.cart__table
 		.table-quantity
 			width: 180px
-	.cart__table-count
+	.table-count
 		margin-right: -1px
-	.cart__table-sum
+	.table-sum
 		flex: 1 0 auto
 		max-width: 100%
-	.cart__table-count-btn-wrap
+	.table-count-btn-wrap
 		flex: 0 0 180px
 		max-width: 180px
 
 
 
 
+	/* ------------------------------------- 
 
 
+		page__cars
+
+	 ------------------------------------- */
+	.cars__table-form-inner
+		flex-wrap: wrap
+	.buttons-block
+		margin-top: 15px
+		flex: 0 0 419px
+		max-width: 419px
+		display: flex
+		justify-content: space-between
+	.cars__table .form-btn
+		margin: 0
 
 
 
@@ -426,6 +440,23 @@
 
 
 
+	/* ------------------------------------- 
+
+
+		page__group
+
+	 ------------------------------------- */
+	.group__item
+		padding: 5px 17px
+
+
+
+
+
+
+
+
+
 
 
 
@@ -462,6 +493,9 @@
 				display: none
 		.breadcrumbs-back
 			display: inline-block
+
+	.form-remind
+		padding-left: 0
 
 	.mb-50
 		margin-bottom: 50px
@@ -620,6 +654,8 @@
 		border-bottom-color: #363636
 		border-width: 6px
 		border-bottom-width: 10px
+	.header__auth-form-btn
+		min-width: 115px
 	
 
 	.header__mob-search
@@ -737,8 +773,9 @@
 
 	 ------------------------------------- */
 
-	.result-number
-		display: block
+	.table__head
+		&-break
+			display: block
 	.table
 		tr:not(.table-title)
 			padding: 25px 20px 20px
@@ -843,20 +880,93 @@
 			justify-content: center
 
 
+
 	/* ------------------------------------- 
 
 
 		page__cart
 
 	 ------------------------------------- */
-	.cart__table-count
+	.table-count
 		width: 100%
 		margin-right: 0
 		padding: 0 20px
-	.cart__table-sum, .cart__table-count-btn-wrap
+	.table-sum, .table-count-btn-wrap
 		flex: 0 0 50%
 		max-width: 50%
 		padding: 0
+
+	/* ------------------------------------- 
+
+
+		page__ordering
+
+	 ------------------------------------- */
+	.ordering__table-count
+		position: relative
+		right: 0
+		bottom: -50px
+		
+
+
+	/* ------------------------------------- 
+
+
+		page__personal-data
+
+	 ------------------------------------- */
+	.page__personal-data .forms
+		padding-bottom: 50px
+		min-height: 1px
+
+
+
+	/* ------------------------------------- 
+
+
+		page__group
+
+	 ------------------------------------- */
+	.group
+		min-height: 1px
+		padding-bottom: 100px
+	.group__head
+		margin-bottom: 100px
+	.group__head-add
+		position: absolute
+		left: 0
+		bottom: -60px
+		margin-left: 0
+	.group__item
+		padding: 5px 10px
+
+
+
+
+	/* ------------------------------------- 
+
+
+		page__cars
+
+	 ------------------------------------- */
+	.cars__table th:first-child, .cars__table td:first-child
+		width: auto
+	.cars__table th, .cars__table td
+		padding: 10px
+	.cars__table .form-label, .buttons-block
+		flex: 0 0 100%
+		max-width: 100%
+	.buttons-block
+		margin-top: 0
+		flex-direction: column
+	.cars__table .form-btn
+		width: 150px
+		margin-top: 15px
+
+
+
+
+
 
 
 

@@ -57,10 +57,10 @@
 						<div class="header__mob-search-box">
 							<h3 class="header__mob-search-title title">Поиск по сайту</h3>
 							<form action="#">
-								<label class="header__mob-search-label">
-									<input type="text" class="header__mob-search-input" name="search">
+								<label class="form-label header__mob-search-label">
+									<input type="text" class="form-input header__mob-search-input" name="search">
 									<span class="placeholder"><i>Например</i>, Фильтр BMW</span>
-									<span class="hint">Введите запрос</span>
+									<small class="form-hint">Введите запрос</small>
 								</label>
 							</form>
 						</div>
@@ -101,8 +101,8 @@
 									</label>
 									<div class="form-footer">
 										<div class="row align-items-center">
-											<div class="col-auto"><input type="submit" class="btn form-btn" value="Вход"></div>
-											<div class="col-auto"><a href="#" class="form-remind header__auth-form-remind">Забыли пароль</a></div>
+											<div class="col-6"><input type="submit" class="btn form-btn header__auth-form-btn" value="Вход"></div>
+											<div class="col-6"><a href="#" class="form-remind header__auth-form-remind">Забыли пароль</a></div>
 										</div>
 									</div>
 								</form>
@@ -119,7 +119,7 @@
 										<li><a href="orders.php" class="header__account-menu-link">История заказов</a></li>
 										<li><a href="#" class="header__account-menu-link">История поиска автомобилей</a></li>
 										<li><a href="#" class="header__account-menu-link">Мои машины</a></li>
-										<li><a href="#" class="header__account-menu-link">Личные данные</a></li>
+										<li><a href="personal-data.php" class="header__account-menu-link personal-data-link">Личные данные</a></li>
 										<li><a href="#" class="header__account-menu-link" id="exit-log">Выход</a></li>
 									</ul>
 								<!-- /.account-menu -->
