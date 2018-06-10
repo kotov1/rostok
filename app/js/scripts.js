@@ -256,6 +256,20 @@ $(function() {
 		$this.val(1);
 	});
 
+
+
+	// подсказка о добавлении товара в корзину
+	$('.table-addCart').click(function() {
+		$('.table-purchase').addClass('show');
+		setTimeout(function() { $('.table-purchase').removeClass('show') }, 1500);
+	});
+
+
+	// переход назад в хлебных крошках на адаптиве
+	$('.breadcrumbs-back').click(function() {
+		window.history.back();
+	});
+
 	
 
 

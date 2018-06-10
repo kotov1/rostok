@@ -285,11 +285,51 @@
 		.table-quantity
 			flex: 0 0 180px
 			max-width: 180px
-			padding: 63px 40px 30px
-	
+			padding: 63px 37px 30px
+
+		.table-sum td
+			min-height: 1px
+		.table-sum td.empty
+			display: none
+		td.table-delivery
+			flex: 1 0 auto
+			max-width: 100%
+		.table-coast
+			flex: 0 0 180px
+			max-width: 180px
 
 
+	/* ------------------------------------- 
 
+
+		page__orders
+
+	 ------------------------------------- */
+	.orders__table
+		.table-price
+			text-align: center
+			
+		.table-quantity
+			padding-top: 75px
+
+
+	/* ------------------------------------- 
+
+
+		page__cart
+
+	 ------------------------------------- */
+	.cart__table
+		.table-quantity
+			width: 180px
+	.cart__table-count
+		margin-right: -1px
+	.cart__table-sum
+		flex: 1 0 auto
+		max-width: 100%
+	.cart__table-count-btn-wrap
+		flex: 0 0 180px
+		max-width: 180px
 
 
 
@@ -412,6 +452,20 @@
 
 	.footer .scrollToTop
 		right: 15px
+
+	.breadcrumbs
+		padding-left: 50px
+		span
+			&:not(:last-of-type)
+				display: none
+			+ span:before
+				display: none
+		.breadcrumbs-back
+			display: inline-block
+
+	.mb-50
+		margin-bottom: 50px
+			
 
 
 
@@ -652,7 +706,7 @@
 
 	.footer-title
 		position: relative
-		padding-left: 15px
+		padding-left: 20px
 		&::before
 			content: ''
 			display: block
@@ -751,12 +805,58 @@
 			bottom: 20px
 			left: -100%
 			text-align: center
-			
+
+
+		tr.table-sum
+			padding: 0
+		td.table-delivery
+			flex: 0 0 50%
+			max-width: 50%
+			padding-left: 15px
+		.table-delivery-coast
+			margin-left: 0
+		.table-coast
+			flex: 0 0 50%
+			max-width: 50%
+			padding: 10px 15px 10px 0
+			display: flex
+			justify-content: center
+			align-items: center
+	
+
+		&-purchase
+			padding: 15px 20px		
 
 			
+	/* ------------------------------------- 
 
 
+		page__orders
 
+	 ------------------------------------- */
+	.orders__table
+		.table-price
+			display: flex
+			align-items: center
+			justify-content: center
+		.table-quantity
+			justify-content: center
+
+
+	/* ------------------------------------- 
+
+
+		page__cart
+
+	 ------------------------------------- */
+	.cart__table-count
+		width: 100%
+		margin-right: 0
+		padding: 0 20px
+	.cart__table-sum, .cart__table-count-btn-wrap
+		flex: 0 0 50%
+		max-width: 50%
+		padding: 0
 
 
 

@@ -88,20 +88,22 @@
 						</button>
 						<!-- authorization -->
 						<div class="header__auth">
-							<h3 class="title header__auth-title">Авторизация</h3>
+							<h3 class="title forms__title header__auth-title">Авторизация</h3>
 							<div class="header__auth-form">
 								<form action="#">
-									<label class="header__auth-label">
-										<input type="email" class="header__auth-input" name="login" placeholder="Введите ваш E-mail" required>
-										<span class="hint">E-mail</span>
+									<label class="form-label">
+										<input type="email" class="form-input" name="login" placeholder="Введите ваш E-mail" required>
+										<small class="form-hint">E-mail</small>
 									</label>
-									<label class="header__auth-label">
-										<input type="password" class="header__auth-input" name="password" placeholder="Введите пароль" required>
-										<span class="hint">Пароль</span>
+									<label class="form-label">
+										<input type="password" class="form-input" name="password" placeholder="Введите пароль" required>
+										<small class="form-hint">Пароль</small>
 									</label>
-									<div class="header__auth-form-footer row align-items-center no-gutters">
-										<div class="col-6"><input type="submit" class="btn header__auth-btn" value="Вход"></div>
-										<div class="col-6 d-flex justify-content-center"><a href="#" class="header__auth-remind">Забыли пароль</a></div>
+									<div class="form-footer">
+										<div class="row align-items-center">
+											<div class="col-auto"><input type="submit" class="btn form-btn" value="Вход"></div>
+											<div class="col-auto"><a href="#" class="form-remind header__auth-form-remind">Забыли пароль</a></div>
+										</div>
 									</div>
 								</form>
 							</div>
@@ -114,7 +116,7 @@
 						<div class="container">
 							<!-- account-menu -->
 									<ul class="header__account-menu">
-										<li><a href="#" class="header__account-menu-link">История заказов</a></li>
+										<li><a href="orders.php" class="header__account-menu-link">История заказов</a></li>
 										<li><a href="#" class="header__account-menu-link">История поиска автомобилей</a></li>
 										<li><a href="#" class="header__account-menu-link">Мои машины</a></li>
 										<li><a href="#" class="header__account-menu-link">Личные данные</a></li>

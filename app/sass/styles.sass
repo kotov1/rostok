@@ -50,7 +50,6 @@ body
 	text-align: center
 
 .overlay
-	// display: none
 	position: fixed
 	top: 0
 	left: 0
@@ -65,7 +64,6 @@ body
 	transition: all .2s
 body.modal-active
 	.overlay
-		// display: block
 		opacity: .8
 		visibility: visible
 		transition: all .4s
@@ -175,6 +173,7 @@ h2
 	padding: 6px 30px
 	list-style: none
 	border: 1px solid #d5d5d5
+	position: relative
 	> span
 		display: inline-block
 		line-height: 1.2
@@ -196,6 +195,79 @@ h2
 				cursor: default
 				&:hover
 					color: #9a9a9a
+	&-back
+		display: none
+		width: 10px
+		height: 10px
+		position: absolute
+		left: 20px
+		top: 50%
+		border-bottom: 2px solid  #cf3128
+		border-left: 2px solid  #cf3128
+		transform: rotate(45deg) translateY(-50%)
+		transform-origin: 50% 50%
+
+
+/* ----- forms ----- */
+.forms
+	&__title
+		margin: 0 0 30px
+		font-size: 18px
+		font-weight: 600
+		line-height: 24px
+		color: #000
+.form
+	max-width: 419px
+	&-label
+		display: block
+		position: relative
+		margin-bottom: 22px
+	&-input
+		height: 50px
+		padding: 20px 30px 5px 13px
+		color: #000
+		font-family: $default-font
+		font-weight: 400
+		border: 1px solid #d5d5d5
+		background-color: #fafafa
+		&::placeholder
+			font-size: 14px
+			font-weight: 300
+			color: #adadad
+	&-btn
+		display: inline-block
+		width: auto
+		min-width: 150px
+
+	&-footer
+		margin-top: 32px
+	&-remind
+		display: inline-block
+		padding-left: 7px
+		color: #9a9a9a
+		font-size: 14px
+		font-weight: 300
+		line-height: 22px
+		transition: all .2s
+		&:hover
+			color: lighten(#9a9a9a,10%)
+			transition: all .2s
+
+	&-hint
+		position: absolute
+		top: 5px
+		left: 13px
+		display: inline-block
+		color: #5b5b5b
+		font-size: 12px
+		font-weight: 300
+		line-height: 18px
+
+
+
+
+
+
 
 
 
@@ -551,48 +623,11 @@ h2
 			border: 8px solid transparent
 			border-bottom: 12px solid #303030
 		&-title
-			margin: 0 0 30px
-			font-size: 16px
-			font-weight: 600
-			line-height: 24px
+			font-size: 18px
 			color: #cdcdcd
-		&-form
-		&-label
-			display: block
-			position: relative
-			margin-bottom: 22px
-		&-input
-			height: 50px
-			padding: 20px 30px 5px 13px
-			color: #000
-			font-family: $default-font
-			font-weight: 400
-			&::placeholder
-				font-size: 14px
-				font-weight: 300
-				color: #adadad
-		&-form-footer
-			margin-top: 32px
-		&-remind
-			color: #9a9a9a
+
+		&-form-remind
 			font-size: 12px
-			font-weight: 300
-			line-height: 22px
-			transition: all .2s
-			&:hover
-				color: lighten(#9a9a9a,10%)
-				transition: all .2s
-.hint
-	position: absolute
-	top: 5px
-	left: 13px
-	display: inline-block
-	color: #5b5b5b
-	font-size: 12px
-	font-weight: 300
-	line-height: 18px
-
-
 
 /* ----- navigation ----- */
 .nav
@@ -985,7 +1020,6 @@ h2
 
  ------------------------------------- */
 .results
-	padding: 50px 0 100px
 	&__title
 		position: relative
 		&-brand
@@ -995,6 +1029,10 @@ h2
 			right: 0
 			bottom: 0
 			background-color: #f5f5f5
+
+
+.table-section
+	padding: 50px 0 100px
 
 .table
 	width: 100%
@@ -1024,7 +1062,6 @@ h2
 		padding-right: 0
 	td:nth-child(2)
 		width: 146px
-
 
 	&-filter
 		width: 162px
@@ -1204,11 +1241,139 @@ h2
 				line-height: 26px
 			.plus
 				margin-left: -1px
-	&-addCart
+	&-btn
 		width: 104px
 		margin-top: 8px
 		padding: 4px
 		font-size: 12px
+
+
+	&-sum td
+		background-color: #e4e4e4
+		border-color: #e4e4e4
+	td.table-delivery
+		text-align: left
+		padding-left: 24px
+		font-size: 14px
+		line-height: 22px
+		font-weight: 600
+		color: $table-accent-color
+	.table-delivery-coast
+		display: inline-block
+		margin-left: 30px
+		font-weight: 400
+		line-height: 24px
+	.table-coast
+		color: $table-accent-color
+		font-size: 24px
+		font-weight: 600
+		line-height: 24px
+		text-align: center
+
+	
+	&-purchase
+		visibility: hidden
+		opacity: 0
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		padding: 20px 40px
+		color: #303030
+		font-size: 14px
+		line-height: 1.71
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.35)
+		border: 1px solid #cecece
+		background-image: linear-gradient(to top, #d2d2d2 0%, #ffffff 100%)
+		white-space: nowrap
+		transition: all .2s
+		&.show
+			visibility: visible
+			opacity: 1
+			transition: all .2s
+
+
+
+/* ------------------------------------- 
+
+
+	page__orders
+
+ ------------------------------------- */
+.orders__table
+	.table-quantity
+		font-size: 18px
+		line-height: 1.33
+		font-weight: 600
+		color: $table-accent-color
+		text-align: center
+
+
+/* ------------------------------------- 
+
+
+	page__cart
+
+ ------------------------------------- */
+.cart__table
+	.table-price
+		width: 162px
+	.table-quantity
+		width: 163px
+.cart__table-wrap
+	position: relative
+	padding-bottom: 70px
+
+.cart__table
+	&-count	
+		display: flex
+		align-items: center
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 325px
+		height: 70px
+		background-color: $accent-color
+		text-align: center
+		&-btn-wrap
+			flex: 0 0 163px
+			max-width: 163px
+		&-btn
+			padding: 9px 14px
+			color: #fafafa
+			font-size: 12px
+			font-weight: 300
+			line-height: 1
+			background-color: #303030
+
+	&-sum
+		flex: 0 0 162px
+		max-width: 162px
+		padding-left: 30px
+		color: #fff
+		font-size: 24px
+		font-weight: 600
+		line-height: 24px
+
+.forms
+	padding-top: 60px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ------------------------------------- 
