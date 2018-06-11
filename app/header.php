@@ -42,10 +42,10 @@
 						<div class="nav__toggle"><i class="nav__toggle-ic"></i></div>
 						<ul class="nav__list">
 							<li><a href="#" class="nav__link"><i class="nav__ic nav__ic-about"></i>О нас</a></li>
-							<li><a href="#" class="nav__link"><i class="nav__ic nav__ic-news"></i>Новости</a></li>
+							<li><a href="news.php" class="nav__link page__news-link"><i class="nav__ic nav__ic-news"></i>Новости</a></li>
 							<li><a href="#" class="nav__link"><i class="nav__ic nav__ic-spare"></i>Запрос запчасти</a></li>
 							<li><a href="#" class="nav__link"><i class="nav__ic nav__ic-rep"></i>Запрос на ремонт</a></li>
-							<li><a href="#" class="nav__link"><i class="nav__ic nav__ic-cont"></i>Контакты</a></li>
+							<li><a href="contacts.php" class="nav__link page__contacts-link"><i class="nav__ic nav__ic-cont"></i>Контакты</a></li>
 						</ul>
 					</nav>
 					<!-- navigation -->
@@ -116,9 +116,9 @@
 						<div class="container">
 							<!-- account-menu -->
 									<ul class="header__account-menu">
-										<li><a href="orders.php" class="header__account-menu-link">История заказов</a></li>
+										<li><a href="history-orders.php" class="header__account-menu-link page__history-link">История заказов</a></li>
 										<li><a href="#" class="header__account-menu-link">История поиска автомобилей</a></li>
-										<li><a href="#" class="header__account-menu-link">Мои машины</a></li>
+										<li><a href="cars.php" class="header__account-menu-link page__cars-link">Мои машины</a></li>
 										<li><a href="personal-data.php" class="header__account-menu-link personal-data-link">Личные данные</a></li>
 										<li><a href="#" class="header__account-menu-link" id="exit-log">Выход</a></li>
 									</ul>

@@ -11,7 +11,6 @@ $(function() {
 		$('.modal.reveal').removeClass('reveal');
 		$('.reveal').removeClass('reveal');
 		$('.modal').closest('.opened').removeClass('opened');
-		console.log("closeModal");
 	};
 
 	// закрытие модальных окон по клику за их пределами
@@ -235,19 +234,19 @@ $(function() {
 
 
 	// quantity plus minus
-	$(document).on('click', '.table-quantity .minus', function(){
+	$(document).on('click', '.minus', function(){
 		var $_inp = $(this).parent().find('input');
 		$_inp.val( parseInt( $_inp.val() ) - 1 );
 		$_inp.trigger('propertychange');
 		return false;
 	});
-	$(document).on('click', '.table-quantity .plus', function(){
+	$(document).on('click', '.plus', function(){
 		var $_inp = $(this).parent().find('input');
 		$_inp.val( parseInt( $_inp.val() ) + 1 );
 		$_inp.trigger('propertychange');
 		return false;
 	});
-	$('.table-quantity input').bind('input propertychange', function () {
+	$('input.quantity').bind('input propertychange', function () {
 		var $this = $(this);
 		$this.val( $this.val().replace(/[^0-9]/gim, '') );
 		if ( $this.val().length == 0 || parseInt( $this.val() ) <= 0 )
@@ -268,10 +267,43 @@ $(function() {
 		window.history.back();
 	});
 
+
+
+
 	
+
+	$(document).ready(function() {
+		if( $(window).width() > 767 ) {
+
+			$(".component__table-wrap").not(":first").hide();
+
+			$(".component__tab").click(function() {
+				$(".component__tab").removeClass("component__tab--active").eq($(this).index()).addClass("component__tab--active");
+				$(".component__table-wrap").hide().eq($(this).index()).fadeIn("normal");
+			}).eq(0).addClass("component__tab--active");
+
+		} else {
+
+			$(".component__hidden-wrap").hide();
+
+			$('.component__hidden-tab').click(function(){
+				if($(this).hasClass('component__hidden-tab--active')) {
+					$(this).removeClass('component__hidden-tab--active');
+					$(this).next('.component__hidden-wrap').slideUp();
+				} else {
+					$('.component__hidden-tab').removeClass('component__hidden-tab--active'); 
+					$(this).addClass('component__hidden-tab--active'); 
+					$('.component__hidden-wrap').slideUp();
+					$(this).next('.component__hidden-wrap').slideToggle();
+				}
+			});
+		}
+	});
 
 
 
 
 
 });
+
+	// new SimpleBar($('#myElement')[0])

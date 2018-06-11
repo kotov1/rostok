@@ -123,7 +123,7 @@
 							<div class="table-quantity-status table-quantity-status--available">В наличии</div>
 							<div class="table-quantity-result">
 								<span class="minus">-</span>
-								<input class="table-quantity-result-input" type="text" name="quantity" value="" placeholder="0">
+								<input class="quantity table-quantity-result-input" type="text" name="quantity" value="" placeholder="0">
 								<span class="plus">+</span>
 							</div>
 							<button type="button" class="btn table-btn table-addCart">В корзину</button>
@@ -152,7 +152,7 @@
 							<div class="table-quantity-status">2 дня</div>
 							<div class="table-quantity-result">
 								<span class="minus">-</span>
-								<input class="table-quantity-result-input" type="text" name="quantity" value="" placeholder="0">
+								<input class="quantity table-quantity-result-input" type="text" name="quantity" value="" placeholder="0">
 								<span class="plus">+</span>
 							</div>
 							<button type="button" class="btn table-btn table-addCart">В корзину</button>
@@ -182,7 +182,7 @@
 							<div class="table-quantity-status">10-20 дней</div>
 							<div class="table-quantity-result">
 								<span class="minus">-</span>
-								<input class="table-quantity-result-input" type="text" name="quantity" value="" placeholder="0">
+								<input class="quantity table-quantity-result-input" type="text" name="quantity" value="" placeholder="0">
 								<span class="plus">+</span>
 							</div>
 							<button type="button" class="btn table-btn table-addCart">В корзину</button>
@@ -215,7 +215,7 @@
 							<div class="table-quantity-status table-quantity-status--available">В наличии</div>
 							<div class="table-quantity-result">
 								<span class="minus">-</span>
-								<input class="table-quantity-result-input" type="text" name="quantity" value="" placeholder="0">
+								<input class="quantity table-quantity-result-input" type="text" name="quantity" value="" placeholder="0">
 								<span class="plus">+</span>
 							</div>
 							<button type="button" class="btn table-btn table-addCart">В корзину</button>
@@ -244,7 +244,7 @@
 							<div class="table-quantity-status">10-20 дней</div>
 							<div class="table-quantity-result">
 								<span class="minus">-</span>
-								<input class="table-quantity-result-input" type="text" name="quantity" value="" placeholder="0">
+								<input class="quantity table-quantity-result-input" type="text" name="quantity" value="" placeholder="0">
 								<span class="plus">+</span>
 							</div>
 							<button type="button" class="btn table-btn table-addCart">В корзину</button>

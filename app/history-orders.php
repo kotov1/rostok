@@ -19,7 +19,7 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
-	<title>Личные данные</title>
+	<title>История заказов</title>
 
 	<link rel="stylesheet" href="css/styles.css">
 
@@ -27,7 +27,7 @@
 
 <body>
 	
-	<div class="page page__cars">	
+	<div class="page page__history">	
 
 		<!-- header -->
 		<?php include("header.php");?>
@@ -45,8 +45,8 @@
 						</a>
 						</span>
 						<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-						<a rel="nofollow" itemprop="item" title="Мои машины" href="#">
-							<span itemprop="name">Мои машины</span>
+						<a rel="nofollow" itemprop="item" title="История заказов" href="orders.php">
+							<span itemprop="name">История заказов</span>
 							<meta itemprop="position" content="2">
 						</a>
 						</span>
@@ -57,71 +57,40 @@
 		<!-- /.breadcrumbs -->
 	
 	
-	<section class="cars">
+	<section class="history-orders">
 		<div class="container">
 
-			<h2 class="title">Мои машины</h2>
-
-				<table class="cars__table">
-					
-					<!-- category 1 title -->
-					<tr class="table-title">
-						<th>Автомобиль</th>
-						<th>VIN</th>
-					</tr>
-					<!-- category 1 title -->
-				
-					<!-- category 1 row 1 -->
+			<div class="history-orders__table-wrap" data-simplebar data-simplebar-auto-hide="false">
+				<table class="history-orders__table">
 					<tr>
-						<td><a href="#" class="cars__table-link">BMW / 3 / 320i</a></td>
-						<td>
-							<div class="cars__table-form">
-								<form action="">
-									<div class="cars__table-form-inner">
-										<label class="form-label">
-											<input type="text" class="form-input" name="vin" placeholder="Xw1235464887" required>
-											<small class="form-hint">VIN</small>
-										</label>
-										<div class="buttons-block">
-											<button type="button" class="btn form-btn form-btn--gray">Сохранить</button>
-											<button type="button" class="btn form-btn">Удалить</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</td>
+						<th>Номер</th>
+						<th>Дата</th>
+						<th>Сумма</th>
+						<th>Оплата</th>
+						<th>Трек-номер</th>
 					</tr>
-					<!-- category 1 row 1 -->
-					
-					<!-- category 1 row 2 -->
 					<tr>
-							<td class="active"><a href="#" class="cars__table-link cars__table-link--active">BMW / 3 / 320i</a></td>
-							<td>
-							<div class="cars__table-form">
-								<form action="">
-									<div class="cars__table-form-inner">
-										<label class="form-label">
-											<input type="text" class="form-input" name="vin" placeholder="Xw1235464887" required>
-											<small class="form-hint">VIN</small>
-										</label>
-										<div class="buttons-block">
-											<button type="button" class="btn form-btn form-btn--gray">Сохранить</button>
-											<button type="button" class="btn form-btn">Удалить</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</td>
+						<td>123</td>
+						<td><a href="#" class="history-orders-date">26.04.2018</a></td>
+						<td>299,99 €</td>
+						<td><span class="history-orders-status">оплачен</span></td>
+						<td>123156456748</td>
 					</tr>
-					<!-- category 1 row 2 -->
-				
-				
+					<tr>
+						<td>123</td>
+						<td><a href="#" class="history-orders-date">27.04.2018</a></td>
+						<td>120,00 €</td>
+						<td><a href="#" class="history-orders-status history-orders-status-pay">оплатить</a></td>
+						<td></td>
+					</tr>
 				</table>
+				</div>
 
 		</div>
 		<!-- /.container -->
 	</section>
-	<!-- /.cars -->
+	<!-- /.history-orders -->
+
 
 
 	
@@ -136,7 +105,7 @@
 
 
 		</div>
-		<!-- /.page__cars -->
+		<!-- /.page__history -->
 
 
 

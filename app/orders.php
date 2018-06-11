@@ -19,7 +19,7 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
-	<title>Заказ</title>
+	<title>Информация по заказу</title>
 
 	<link rel="stylesheet" href="css/styles.css">
 

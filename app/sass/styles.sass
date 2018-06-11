@@ -112,9 +112,15 @@ h3
 		transition: all .2s
 
 
+
 /* ----- active links ----- */	
-.page__personal-data .personal-data-link
+.page__personal-data .personal-data-link,
+.page__cars .page__cars-link,
+.page__news .page__news-link,
+.page__contacts .page__contacts-link,
+.page__history .page__history-link
 	color: $accent-color
+
 
 
 /* ----- links "more" in sections ----- */	
@@ -285,10 +291,84 @@ h3
 		line-height: 18px
 
 
+/*----- simplebar plugin -----*/
+[data-simplebar]
+	position: relative
+	padding-bottom: 10px
+	z-index: 0
+	overflow: hidden !important
+	max-height: inherit
+	-webkit-overflow-scrolling: touch
 
+[data-simplebar="init"]
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
 
+.simplebar-scroll-content
+	overflow-x: hidden !important
+	overflow-y: scroll
+	min-width: 100% !important
+	max-height: inherit !important
+	-webkit-box-sizing: content-box !important
+	box-sizing: content-box !important
 
+.simplebar-content
+	overflow-y: hidden !important
+	overflow-x: scroll
+	-webkit-box-sizing: border-box !important
+	box-sizing: border-box !important
+	min-height: 100% !important
 
+.simplebar-track
+	z-index: 1
+	position: absolute
+	right: 0
+	bottom: 10px
+	width: 11px
+
+.simplebar-scrollbar
+	position: absolute
+	right: 2px
+	width: 7px
+	min-height: 5px
+	&:before
+		position: absolute
+		content: ""
+		background: $accent-color
+		left: 0
+		right: 0
+		opacity: 0
+		transition: opacity 0.2s linear
+
+.simplebar-track
+	&:hover .simplebar-scrollbar:before, .simplebar-scrollbar.visible:before
+		opacity: .9
+		transition: opacity 0 linear
+	&.vertical
+		top: 0
+		.simplebar-scrollbar:before
+			top: 2px
+			bottom: 2px
+	&.horizontal
+		left: 0
+		width: auto
+		height: 5px
+		.simplebar-scrollbar
+			&:before
+				height: 100%
+				left: 0px
+				right: 0px
+			right: auto
+			top: 10px
+			height: 5px
+			min-height: 0
+			min-width: 10px
+			width: auto
+
+@media only screen and (min-width : 1200px)
+	.simplebar-scrollbar
+		display: none
 
 
 
@@ -1066,7 +1146,7 @@ h3
 				transition: background-color .2s
 
 	th
-		padding: 0.9285714285714286em 2.071428571428571em
+		padding: 13px 29px
 		text-align: left
 		background-color: #303030
 		font-size: 14px
@@ -1237,8 +1317,6 @@ h3
 				display: inline-block
 				width: 42px
 				height: 30px
-				border: none
-				outline: none
 				font: 14px $default-font
 				color: $table-accent-color
 				background-color: #fafafa
@@ -1610,15 +1688,16 @@ h3
 		transition: background-color .2s
 		vertical-align: middle
 		color: $table-color
-		&:first-child
-			text-decoration: underline
-			&.active
-				color: $accent-color
-				text-decoration: none
-			&:hover
-				color: $accent-color
-				text-decoration: none
-				cursor: pointer	
+
+	.cars__table-link
+		text-decoration: underline
+		&--active
+			color: $accent-color
+			text-decoration: none
+		&:hover
+			color: $accent-color
+			text-decoration: none
+			cursor: pointer	
 
 
 	&-form-inner
@@ -1635,7 +1714,648 @@ h3
 
 
 
- 
+
+/* ------------------------------------- 
+
+
+	page__component
+
+ ------------------------------------- */
+.component
+	padding: 50px 0 100px
+	.simplebar-track.vertical
+		display: none
+	&__block
+		margin-top: 30px
+		&--m-top
+			margin-top: 50px
+	&__img
+		width: 320px
+		height: 320px
+		padding: 25px
+		border: 1px solid #d5d5d5
+		background-color: #fafafa
+		display: flex
+		align-items: center
+		justify-content: center
+
+	&__descr
+		padding-top: 5px
+		&-info
+			font-size: 18px
+			font-weight: 600
+			color: $table-accent-color
+		&-number
+			font-size: 14px
+			font-weight: 600
+			color: $table-color
+		&-dest
+			margin-top: 15px
+			font-size: 14px
+			font-style: italic
+			font-weight: 400
+			color: $table-color
+			i
+				font-weight: 600
+				color: $table-accent-color
+		&-analogue
+			margin-top: 30px
+			display: flex
+			align-items: center
+			&-text
+				display: inline-block
+				margin-right: 10px
+				padding: 6px 21px
+				font-size: 12px
+				color: #fafafa
+				background-color: #303030
+				font-weight: 400
+				line-height: 18px
+				transition: all .2s
+				&:hover
+					color: $accent-color
+					cursor: pointer
+					transition: all .2s
+				&:active
+					transform: translate(1px, 1px)
+					transition: all .2s
+			&-ic
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 25px
+				height: 25px
+				border: 2px solid $table-color
+				border-radius: 50%
+				background-color: #fafafa
+				transition: all .2s
+				&:hover
+					border-color: $accent-color
+					cursor: pointer
+					transition: all .2s
+			&-info
+				margin-right: 8px
+				font-weight: 700
+				font-size: 18px
+				color: $table-color
+				&:hover
+					color: $accent-color
+			&-car
+				svg
+					display: block
+					width: 15px
+					height: 12px
+				.cls-1
+					fill: $table-color
+				&:hover
+					.cls-1
+						fill: $accent-color
+						transition: all .2s
+
+	
+	&__add
+		width: 427px
+		margin-left: auto
+		min-height: 320px
+		padding: 35px 58px
+		background-color: #303030
+
+		&-item
+			margin-bottom: 30px
+			&:last-child
+				margin-bottom: 0
+
+	&__price
+		font-size: 30px
+		font-weight: 600
+		line-height: 24px
+		color: #fff
+		text-align: right
+	&__status
+		margin-top: 10px
+		font-size: 14px
+		line-height: 24px
+		color: #7eb105
+		text-align: right
+		&--notAvailable
+			color: #818080
+	&__quantity
+		margin-top: 11px
+		display: flex
+		&-result
+			display: flex
+			justify-content: space-between
+			align-items: center
+			width: 150px
+			border: 1px solid #d5d5d5
+		&-input
+			display: inline-block
+			width: 70px
+			height: 38px
+			font: 18px $default-font
+			color: $table-accent-color
+			background-color: #fafafa
+			text-align: center
+			vertical-align: middle
+			padding-top: 2px
+			border-left: 1px solid #d5d5d5
+			border-right: 1px solid #d5d5d5
+			&::placeholder
+				color: $table-accent-color
+		.minus, .plus
+			width: 40px
+			height: 38px
+			color: $table-color
+			background-color: #fafafa
+			vertical-align: middle
+			text-align: center
+			transition: color .2s
+			&:hover
+				cursor: pointer
+				color: $accent-color
+				transition: color .2s
+			&::selection
+				background: transparent
+				color: #d5d5d5
+		.minus
+			font-size: 36px
+			line-height: 34px
+		.plus
+			font-size: 22px
+			line-height: 40px
+			
+		&-btn
+			min-width: 150px
+			margin-left: 10px
+			padding: 7px 9px
+
+
+	&__tabs
+		display: flex
+		position: relative
+		top: 1px
+	&__tab
+		padding: 10px 30px
+		font-size: 14px
+		font-weight: 600
+		color: #3a3a3a
+		border: 1px solid transparent
+		border-bottom: none
+		transition: all .2s
+		&--active
+			color: #f33f2e
+			background: #fafafa
+			border-color: #d5d5d5
+		&:hover
+			cursor: pointer
+			color: #f33f2e
+			transition: all .2s
+
+	&__block-details
+		padding: 30px
+		background: #fafafa
+		border: 1px solid #d5d5d5
+
+
+
+	&__table-wrap
+		min-height: 225px
+	&__hidden-tab
+		display: none
+		color: #3a3a3a
+		font-size: 14px
+		font-weight: 600
+	&__table
+		width: 100%
+		border-collapse: collapse
+		border: 1px solid #d5d5d5
+		font-family: $default-font
+		&--color-cells
+			td:nth-child(2n)
+				color: #1f1d1e
+		&--cells-align
+			td
+				width: 25%
+			td:not(:first-child)
+				text-align: right
+			td:last-child
+				text-align: center
+				
+		tr
+			&:hover
+				cursor: pointer
+				td
+					background-color: #e4e4e4
+					transition: all .1s
+				.component-seek
+					border-bottom: none
+			&:last-child
+				td
+					border-bottom: none
+		td
+			height: 30px
+			padding: 0 30px
+			font-size: 14px
+			font-weight: 400
+			line-height: 24px
+			color: #6e6e6e
+			background-color: #f5f5f5
+			border-bottom: 1px solid #e5e5e5
+			border-right: 1px solid #d5d5d5
+			transition: all .1s
+		.component-seek
+			color: $accent-color
+			border-bottom: 1px dashed $accent-color
+		
+
+
+
+
+
+/* ------------------------------------- 
+
+
+	page_contacts
+
+	------------------------------------- */
+
+
+
+/* ------------------------------------- 
+	contacts
+	------------------------------------- */
+.contacts
+	padding-top: 50px
+	&__block
+		display: -webkit-flex
+		display: flex
+		margin-top: 30px
+		flex-wrap: wrap
+		-webkit-flex-wrap: wrap  
+	&__item
+		min-height: 200px
+		min-width: 240px
+		padding: 16px 30px 35px
+		border: 1px solid #D6D6D6
+		transition: background .2s
+		-webkit-flex-grow: 1
+		flex-grow: 1
+		-webkit-flex-basis: 33.333333%
+		flex-basis: 33.333333%
+		margin-right: -1px
+		margin-bottom: -1px
+	&__text_1
+		font-size: 14px
+		font-weight: 600
+		color: #3a3a3a
+		line-height: 1
+	&__text_style2
+		margin-bottom: 21px
+	&__text_style3
+		margin-bottom: 35px  
+	&__text_2
+		font-size: 14px
+		font-weight: 600
+		color: #3a3a3a
+		line-height: 1
+		margin-bottom: 10px
+		margin-top: 5px
+	&__text_color1
+		color: #7f7f7f
+	&__text_color2
+		color: $accent-color
+	&__text_style1
+		text-transform: uppercase
+	&__imgcode
+		display: block
+		width: 125px
+		height: 124px
+		margin: 15px auto 0
+
+/* ------------------------------------- 
+	mapCont
+	------------------------------------- */
+
+.mapCont
+	margin-top: 50px
+	margin-bottom: 100px
+	#map
+		width: 100%
+		height: 500px
+
+
+
+/* ------------------------------------- 
+
+
+	page_news
+
+	------------------------------------- */
+
+/* ------------------------------------- 
+	news
+	------------------------------------- */
+
+
+
+.news
+	padding: 50px 0
+	&__item
+		display: flex
+		flex-wrap: nowrap
+		margin-top: 28px
+		padding-bottom: 30px
+		border-bottom: 1px #D6D6D6 solid
+	&__wrapImg
+		width: 304px
+		height: 228px
+		max-width: 	304px
+		margin-right: 30px
+		margin-bottom: 20px
+		flex-shrink: 0
+	&__img
+		max-width: 100%
+		height: auto
+	&__wrapText
+		display: inline-block
+	&__text_1
+		margin-top: 10px
+		font-size: 14px
+		font-weight: 600
+		color: #b7b7b7
+		line-height: 1
+	&__text_2
+		margin: 0
+	&__heading
+		&:link
+			margin-top: 20px
+			font-size: 18px
+			font-weight: 600
+			color: #000
+			line-height: 1
+			transition: all .2s 
+		&:visited
+			color: #000
+			text-decoration: none 
+		&:hover
+			color: $accent-color
+			text-decoration: underline
+			transition: all .2s
+		&:active
+			color: #000
+			text-decoration: none  
+	&__text_3
+		margin-top: 26px
+		margin-bottom: 25px
+		font-size: 14px
+		font-weight: 600
+		color: #7f7f7f
+		line-height: 1.7
+	&__moreInfo:link
+		color: $accent-color
+		background-color: transparent
+		margin-top: 5px
+		font-size: 12px
+		font-weight: 600
+		line-height: 1
+		border: solid #D6D6D6 1px
+		padding: 10px 52px 10px 30px
+		position: relative
+		text-decoration: none
+		transition: all .2s
+	&__moreInfo:visited
+		color: $accent-color 
+		background-color: transparent
+		border: solid #D6D6D6 1px
+		transition: all .2s     
+	&__moreInfo:hover
+		color: #fff 
+		background-color: $accent-color
+		border: solid $accent-color 1px
+		transition: all .2s
+	&__moreInfo:acive
+		color: $accent-color 
+		background-color: transparent
+		border: solid #D6D6D6 1px
+		transition: all .2s 
+	&__moreInfoIcon
+		display: block
+		border-bottom: 2px solid #222
+		border-right: 2px solid #222
+		width: 8px
+		height: 8px
+		position: absolute
+		right: 17px
+		top: 13px
+		bottom: 0
+		z-index: 5
+		transform: rotate(-45deg)
+		transition: all .2s
+	&__moreInfo:hover>.news__moreInfoIcon
+		border-bottom: 2px solid #fff
+		border-right: 2px solid #fff
+		transition: all .2s
+
+
+
+/* ----- pagination ----- */
+.pagination
+	padding-bottom: 100px
+	&__wrap
+		display: inline-block
+
+	&__item
+		color: #949494
+		float: left
+		width: 40px
+		height: 40px
+		text-align: center
+		font-size: 18px
+		vertical-align: middle
+		line-height: 40px
+		text-decoration: none
+		transition: all .2s
+		border: 1px solid #ddd
+		margin: 0 3px
+
+
+	&__item:first-child
+		margin-left: 0
+	&__item:first-child,
+	&__item:last-child
+		font-size: 26px
+		line-height: 32px
+
+	&__item.active
+		background-color: $accent-color
+		color: white
+		border: 1px solid #D6D6D6
+		transition: all .2s		
+	&__item:hover:not(.active)
+		background-color: #2C2C2C
+		border: 1px solid #2C2C2C
+		color: #D6D6D6
+		transition: all .2s
+
+
+
+
+/* ------------------------------------- 
+
+
+	page_subgroup
+
+	------------------------------------- */
+
+/* ------------------------------------- 
+	subgroup
+	------------------------------------- */
+
+.subgroup
+	padding: 50px 0 100px
+	&__logoTitle
+		width: 65px
+		height: 45px
+		position: absolute
+		top: 0
+		right: 0
+		background-color: #F5F5F5
+		text-align: right
+		img
+			max-width: 80%
+			height: auto	
+	&__block
+		margin-top: 25px
+	&__wrapPicture
+		width: 200px
+		min-height: 130px
+		background-color: #fff
+		text-align: center
+		border: solid $accent-color 1px
+		margin-bottom: 20px
+	&__wrapImg
+		max-width: 100px
+		max-height: 100px
+		display: block
+		margin: 10px auto
+	&__img
+		width: 100%
+		height: auto
+		max-width: 180px
+		max-height: 180px
+		vertical-align: middle
+	&__textImg
+		font-size: 12px
+		color: #303030
+		margin-top: 0px
+	&__text1
+		margin-bottom: 10px
+		font-size: 14px
+		color: #211e1f
+		font-weight: 600
+		max-width: 210px
+	&__other
+		max-width: 210px
+	&__other li
+		font-size: 12px
+		color: #303030
+		margin-top: 0px
+		line-height: 1.5
+		transition: all .1s			
+	&__other li.activeOther,
+	&__other li:hover
+		cursor: pointer
+		color: $accent-color
+		transition: all .1s	
+	&__optionProductWrap
+		margin-left: -77px
+		border: solid 1px #d5d5d5
+	&__optionProduct li
+		font-size: 14px
+		color: #929292
+		padding: 9px 20px
+		font-weight: 600
+		transition: all .2s
+	&__optionProduct li.activeOption,
+	&__optionProduct li:hover
+		cursor: pointer
+		background-color: #d5d5d5
+		color: #211e1f
+		font-weight: 600
+		transition: all .2s		
+
+
+
+
+
+
+/* ------------------------------------- 
+
+
+	page__history
+
+	------------------------------------- */
+.history-orders
+	padding: 50px 0
+	min-height: 100vh
+	&__table
+		width: 100%
+		border-collapse: collapse
+		border: 1px solid #d5d5d5
+		font-family: $default-font
+		tr
+			&:last-child
+				td
+					border-bottom: none
+		th
+			padding: 13px 29px
+			text-align: left
+			background-color: #303030
+			font-size: 14px
+			border: 1px solid #d5d5d5
+			line-height: 24px
+			font-weight: 600
+			color: #fafafa
+		td
+			height: 30px
+			padding: 0 30px
+			font-size: 14px
+			font-weight: 400
+			line-height: 24px
+			color: #929292
+			background-color: #f5f5f5
+			border-bottom: 1px solid #e5e5e5
+			border-right: 1px solid #d5d5d5
+			transition: all .1s
+			&:nth-child(3)
+				text-align: right
+			&:nth-child(4)
+				text-align: center
+		.component-seek
+			color: $accent-color
+			border-bottom: 1px dashed $accent-color
+	
+	.history-orders-date
+		color: $accent-color
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+			cursor: pointer
+	.history-orders-status		
+		color: #7eb105
+		&-pay
+			color: $accent-color
+			border-bottom: 1px dashed $accent-color
+			&:hover
+				border-bottom: none
+
+
+
+
+
+
+
+
 
 
 /* ------------------------------------- 
