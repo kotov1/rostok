@@ -19,7 +19,7 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
-	<title>История заказов</title>
+	<title>История поиска номеров</title>
 
 	<link rel="stylesheet" href="css/styles.css">
 
@@ -45,8 +45,8 @@
 						</a>
 						</span>
 						<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-						<a rel="nofollow" itemprop="item" title="История заказов" href="orders.php">
-							<span itemprop="name">История заказов</span>
+						<a rel="nofollow" itemprop="item" title="История поиска номеров" href="orders.php">
+							<span itemprop="name">История поиска номеров</span>
 							<meta itemprop="position" content="2">
 						</a>
 						</span>
@@ -57,31 +57,48 @@
 		<!-- /.breadcrumbs -->
 	
 	
-	<section class="history history-orders">
+	<section class="history history-numbers">
 		<div class="container">
 
-			<div class="history__table-wrap" data-simplebar data-simplebar-auto-hide="false">
-				<table class="history-table history-orders__table">
+			<h2 class="title">История поиска номеров</h2>
+
+			<div class="history-numbers__table-wrap" data-simplebar data-simplebar-auto-hide="false">
+				<table class="history-table history-numbers__table">
 					<tr>
-						<th>Номер</th>
-						<th>Дата</th>
-						<th>Сумма</th>
-						<th>Оплата</th>
-						<th>Трек-номер</th>
+						<td><a href="#">121245545664</a></td>
+						<td><a href="#">43121245545664</a></td>
+						<td><a href="#">43121245545664</a></td>
+						<td><a href="#">g121245545664</a></td>
 					</tr>
 					<tr>
-						<td>123</td>
-						<td><a href="#" class="history-orders-date">26.04.2018</a></td>
-						<td>299,99 €</td>
-						<td><span class="history-orders-status">оплачен</span></td>
-						<td>123156456748</td>
+						<td><a href="#">213354311</a></td>
+						<td><a href="#">213354311</a></td>
+						<td><a href="#">213354311</a></td>
+						<td><a href="#">213354311</a></td>
 					</tr>
 					<tr>
-						<td>123</td>
-						<td><a href="#" class="history-orders-date">27.04.2018</a></td>
-						<td>120,00 €</td>
-						<td><a href="#" class="history-orders-status history-orders-status-pay">оплатить</a></td>
-						<td></td>
+						<td><a href="#">545464</a></td>
+						<td><a href="#">545464</a></td>
+						<td><a href="#">545464</a></td>
+						<td><a href="#">545464</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">54613156</a></td>
+						<td><a href="#">sd54613156</a></td>
+						<td><a href="#">ds54613156</a></td>
+						<td><a href="#">54613156</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">213215451</a></td>
+						<td><a href="#">213215451</a></td>
+						<td><a href="#">213215451</a></td>
+						<td><a href="#">213215451</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">45456445454</a></td>
+						<td><a href="#">45456445454</a></td>
+						<td><a href="#">45456445454</a></td>
+						<td><a href="#">45456445454</a></td>
 					</tr>
 				</table>
 				</div>
@@ -89,7 +106,7 @@
 		</div>
 		<!-- /.container -->
 	</section>
-	<!-- /.history-orders -->
+	<!-- /.history-numbers -->
 
 
 

@@ -96,7 +96,7 @@
 					
 					<div class="col-xl-3 col-lg-4 col-md-5 col-sm-12">
 						<div class="subgroup__wrapPicture">	
-							<div class="subgroup__wrapImg" class="subgroup__wrapImg">	
+							<div class="subgroup__wrapImg">	
 								<img src="img/bmw-filter.png" alt="фильтр" class="subgroup__img">
 							</div>
 							<p class="subgroup__textImg">Фильтры</p>
@@ -125,25 +125,25 @@
 
 							<p class="subgroup__text1">	Другие разделы:</p>
 							<ul class="subgroup__other">	
-								<li> <a href="#">Внутренняя отделка</li></a>
-								<li> <a href="#">Двигатель</li></a>
-								<li> <a href="#">Детали для сервиса / ТО / ухода</li></a>
-								<li> <a href="#">Колёса / шины</li></a>
-								<li> <a href="#">Комплектующие</li></a>
-								<li> <a href="#">Коробка передач</li></a>
-								<li> <a href="#">Ступенчатая коробка передач</li></a>
-								<li> <a href="#">Масла</li></a>
-								<li> <a href="#">Кузов</li></a>
-								<li> <a href="#">Подвеска / амортизация</li></a>
-								<li> <a href="#">Подвеска оси / система</li></a>
-								<li> <a href="#">подвески / колеса</li></a>
-								<li> <a href="#">Привод колеса</li></a>
-								<li> <a href="#">Система зажигания / накаливания</li></a>
-								<li> <a href="#">Система охлаждения</li></a>
-								<li> <a href="#">Система очистки окон</li></a>
-								<li> <a href="#">тормозная система</li></a>
-								<li> <a href="#">Электрика</li></a>
-								<li  class="activeOther"><a href="#">Фильтры</li></a>
+								<li><a href="#">Внутренняя отделка</a></li>
+								<li><a href="#">Двигатель</a></li>
+								<li><a href="#">Детали для сервиса / ТО / ухода</a></li>
+								<li><a href="#">Колёса / шины</a></li>
+								<li><a href="#">Комплектующие</a></li>
+								<li><a href="#">Коробка передач</a></li>
+								<li><a href="#">Ступенчатая коробка передач</a></li>
+								<li><a href="#">Масла</a></li>
+								<li><a href="#">Кузов</a></li>
+								<li><a href="#">Подвеска / амортизация</a></li>
+								<li><a href="#">Подвеска оси / система</a></li>
+								<li><a href="#">подвески / колеса</a></li>
+								<li><a href="#">Привод колеса</a></li>
+								<li><a href="#">Система зажигания / накаливания</a></li>
+								<li><a href="#">Система охлаждения</a></li>
+								<li><a href="#">Система очистки окон</a></li>
+								<li><a href="#">тормозная система</a></li>
+								<li><a href="#">Электрика</a></li>
+								<li class="activeOther"><a href="#">Фильтры</a></li>
 							</ul>
 
 						</div>

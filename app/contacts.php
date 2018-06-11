@@ -114,16 +114,16 @@
 
 
 
-		<!-- section mapCont -->
-		<section class="mapCont">
+		<!-- map-->
+		<div class="mapCont">
 			<div class="container">
 				
 				<div id="map"></div>
 
 			</div>
 			<!-- /.container -->
-		</section>
-		<!-- /.mapCont -->
+		</div>
+		<!-- /.map -->
 
 
 		<!-- footer -->

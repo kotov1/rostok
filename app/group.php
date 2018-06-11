@@ -167,7 +167,7 @@
 					<div class="col-6 col-md-3 col-xl-2">
 						<div class="group__item">
 							<div class="group__item-img">
-								<img src="img/components/group10.jpg" alt="Деталь" class=img-responsiveg">
+								<img src="img/components/group10.jpg" alt="Деталь" class="img-responsive">
 							</div>
 							<div class="group__item-text">Система зажигания&nbsp;/ накаливания</div>
 						</div>
@@ -176,7 +176,7 @@
 					<div class="col-6 col-md-3 col-xl-2">
 						<div class="group__item">
 							<div class="group__item-img">
-								<img src="img/components/group11.jpg" alt="Деталь" class=img-responsiveg">
+								<img src="img/components/group11.jpg" alt="Деталь" class="img-responsive">
 							</div>
 							<div class="group__item-text">Система охлаждения</div>
 						</div>
@@ -185,7 +185,7 @@
 					<div class="col-6 col-md-3 col-xl-2">
 						<div class="group__item">
 							<div class="group__item-img">
-								<img src="img/components/group12.jpg" alt="Деталь" class=img-responsiveg">
+								<img src="img/components/group12.jpg" alt="Деталь" class="img-responsive">
 							</div>
 							<div class="group__item-text">Система очистки окон</div>
 						</div>
@@ -194,7 +194,7 @@
 					<div class="col-6 col-md-3 col-xl-2">
 						<div class="group__item">
 							<div class="group__item-img">
-								<img src="img/components/group13.jpg" alt="Деталь" class=img-responsiveg">
+								<img src="img/components/group13.jpg" alt="Деталь" class="img-responsive">
 							</div>
 							<div class="group__item-text">Тормозная система</div>
 						</div>
@@ -203,7 +203,7 @@
 					<div class="col-6 col-md-3 col-xl-2">
 						<div class="group__item">
 							<div class="group__item-img">
-								<img src="img/components/group14.jpg" alt="Деталь" class=img-responsiveg">
+								<img src="img/components/group14.jpg" alt="Деталь" class="img-responsive">
 							</div>
 							<div class="group__item-text">Электрика</div>
 						</div>
@@ -212,7 +212,7 @@
 					<div class="col-6 col-md-3 col-xl-2">
 						<div class="group__item">
 							<div class="group__item-img">
-								<img src="img/components/group15.jpg" alt="Деталь" class=img-responsiveg">
+								<img src="img/components/group15.jpg" alt="Деталь" class="img-responsive">
 							</div>
 							<div class="group__item-text">Фильтры</div>
 						</div>

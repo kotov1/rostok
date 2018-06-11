@@ -271,7 +271,7 @@ $(function() {
 
 
 	
-
+	// контентные таблицы страницы "деталь" в виде аккордеона на адаптиве
 	$(document).ready(function() {
 		if( $(window).width() > 767 ) {
 
@@ -301,9 +301,68 @@ $(function() {
 	});
 
 
+	// Custom select
+	$(".table-filter-select").each(function() {
+		var classes = $(this).attr("class"),
+				id      = $(this).attr("id"),
+				name    = $(this).attr("name");
+		var template =  '<div class="' + classes + '">';
+				template += '<span class="my-select-trigger">' + $(this).attr("placeholder") + '</span>';
+				template += '<div class="my-options">';
+				$(this).find("option").each(function() {
+					template += '<span class="my-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+				});
+		template += '</div></div>';
+		
+		$(this).wrap('<div class="my-select-wrapper"></div>');
+		$(this).after(template);
+	});
+	$(".my-option:first-of-type").hover(function() {
+		$(this).parents(".my-options").addClass("option-hover");
+	}, function() {
+		$(this).parents(".my-options").removeClass("option-hover");
+	});
+	$(".my-select-trigger").on("click", function(event) {
+		$(".table-filter-selectt").removeClass("opened");
+		$('html').one('click',function() {
+			$(".table-filter-select").removeClass("opened");
+		});
+		$(this).parents(".table-filter-select").toggleClass("opened");
+		event.stopPropagation();
+	});
+	$(".my-option").on("click", function() {
+		$(this).parents(".my-select-wrapper").find("select").val($(this).data("value"));
+		$(this).parents(".my-options").find(".my-option").removeClass("selection");
+		$(this).addClass("selection");
+		$(this).parents(".table-filter-select").removeClass("opened");
+		$(this).parents(".table-filter-select").find(".my-select-trigger").text($(this).text());
+	});
+
+
+	//  Закрытие - открытие карточки на странице поиска машин
+	$('.table-card-close').click(function() {
+		$('.table-card').hide();
+	});
+	$('.car-model-link').click(function(event) {
+		$('.table-card').slideDown();
+		event.preventDefault();
+	});
+
+
+	// выбор года выпуска авто
+	$('.years-block .year').click(function() {
+		$('.years-block .year').removeClass('year--active');
+		$(this).addClass('year--active');
+	});
+
+
+
+
+
+
+
+
 
 
 
 });
-
-	// new SimpleBar($('#myElement')[0])

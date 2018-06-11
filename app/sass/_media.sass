@@ -384,20 +384,56 @@
 
 
 
+	/* ------------------------------------- 
+
+
+		page__history
+
+	 ------------------------------------- */
+	.history-orders__table th, .history-cars__table th
+		padding: 10px 20px
+	.history-orders__table td, .history-cars__table td
+		padding: 0 20px
+	.history-cars__table
+		th, td
+			white-space: nowrap
 
 
 
 
+	/* ------------------------------------- 
 
 
+		page__list
 
+	 ------------------------------------- */
+	.year
+		flex: 1 0 auto
+		max-width: 42.22px
+	.list-table__outer
+		max-height: 44.28571428571429em
+		position: relative
+		overflow-y: auto
+		
+	.list-table__inner
+		width: 750px
+		margin-right: 180px
+		overflow-x: scroll
 
-
-
-
-
-
-
+	.list-table
+		th, td
+			white-space: nowrap
+		th
+			padding: 10px 20px
+		td
+			padding: 0 20px
+		th:last-child
+			height: 50px
+	.list-table-motor
+			&:last-child
+				position: absolute
+				right: 0
+				width: 180px
 
 
 
@@ -526,6 +562,33 @@
 	 ------------------------------------- */
 	.history-orders__table td
 		min-width: 209px
+	.history-numbers__table td
+		min-width: 218px
+
+
+
+
+
+
+
+	/* ------------------------------------- 
+
+
+		page__list
+
+	 ------------------------------------- */
+	.list-table__inner
+		width: 510px
+	.year
+		flex: 0 1 auto
+		max-width: 42.22px
+
+
+
+
+
+
+
 
 
 
@@ -1150,21 +1213,36 @@
 		page__history
 
 	 ------------------------------------- */
-	.history-orders__table td
+	.history-table td
 		white-space: nowrap
 		min-width: 1px
 
+	.table-card-add
+		padding-right: 13px
 
 
 
 
 
 
+	/* ------------------------------------- 
 
 
+		page__list
 
+	 ------------------------------------- */
+	.list-table__inner
+		width: calc(100% - 45px)
+		margin-right: 45px
 
-
+	.list-table-motor
+		th, td
+			&:last-child
+				width: 45px
+				text-align: center
+				padding: 0 15px
+		.add-txt
+			display: none
 
 
 
@@ -1207,15 +1285,6 @@
 		&__item
 			min-width: 270px
 
-
-
-
-	/* ------------------------------------- 
-		mapCont
-	 ------------------------------------- */
-	// .mapCont
-	// 	&__wrapMap
-	// 		height: 500px
 
 
 
