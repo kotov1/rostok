@@ -63,7 +63,7 @@
 			<h2 class="title">История поиска машин</h2>
 
 				<div class="table-filter-wrap">
-					<select name="filter" class="table-filter-select" placeholder="Год выпуска">
+					<select name="filter" class="select" placeholder="Год выпуска">
 						<option value="Модель">Модель</option>
 						<option value="Год выпуска">Год выпуска</option>
 						<option value="кВт">кВт</option>
@@ -149,7 +149,7 @@
 				<div class="table-card">
 
 					<div class="table-card-nav">
-						<select name="car-brand" class="car-brand table-filter-select" placeholder="BMW">
+						<select name="car-brand" class="car-brand select" placeholder="BMW">
 							<option value="BMW">BMW</option>
 							<option value="Audi">AudiAudi</option>
 							<option value="Chrysler">Chrysler</option>

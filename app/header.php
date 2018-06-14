@@ -69,13 +69,14 @@
 
 				<div class="col-auto ml-auto">
 					<div class="header__cart modal">
-						<i class="header__cart-ic"></i>
+						<a href="cart.php" class="header__cart-ic header__cart-ic-desk"></a>
+						<i class="header__cart-ic header__cart-ic-mob"></i>
 						<div class="header__cart-box">
 							<h3 class="title header__cart-title">Корзина</h3>
 							<span class="header__cart-quantity">3 шт.</span>
 							<span class="header__cart-divider">/</span>
 							<span class="header__cart-price">33,14 eur</span>
-							<button type="button" class="btn header__cart-btn">Оформить заказ</button>
+							<a href="cart.php" class="btn header__cart-btn">Оформить заказ</a>
 						</div>
 					</div>
 				</div>

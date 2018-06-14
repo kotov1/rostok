@@ -68,11 +68,268 @@ body.modal-active
 		visibility: visible
 		transition: all .4s
 
+
+/* ----- page__text ----- */
+.content
+	padding: 50px 0 100px
+	&__title
+		font-size: 1.5rem
+		font-weight: 600
+		line-height: 1.7
+	&__block-clear
+		position: relative
+
+	.content__title-form
+		margin-top: 90px
+	.tip
+		color: #9a9a9a
+
+.subtitle
+	margin-bottom: 28px
+	font-size: .875rem
+	font-weight: 600
+	color: #9a9a9a
+
+.main-text-wrap
+	margin-right: 620px
+.text-wrap
+	margin-top: 40px
+
+.text-p
+	font-size: .875rem
+	line-height: 1.75
+	color: #000
+
+.text-link
+	color: $accent-color
+	text-decoration: underline
+	&:hover
+		color: $accent-color
+
+.text-accent
+	color: $accent-color
+
+.text-request
+	text-decoration: underline
+	
+.text-box
+	max-width: 608px
+	min-height: 456px
+	padding-top: 30px
+	position: absolute
+	top: 0
+	right: 0
+	.banners
+		&__text-block
+			max-width: 59%
+			right: 0
+			bottom: 85px
+			text-align: right
+			
+
+		&__text
+			display: block
+			width: 100%
+			color: #f5f5f5
+			text-transform: none
+			&-1
+				padding: 8px 20px
+				font-size: 18px
+				font-weight: 700
+				background-color: #161616
+			&-2
+				max-width: 63%
+				margin-left: auto
+				font-size: 14px
+				background-color: $accent-color
+			.text-tel
+				font-weight: 700
+				color: #f5f5f5
+
+.text-advantages
+	margin-top: 20px
+	padding-left: 28px
+	font-size: 14px
+	li
+		position: relative
+	&-item
+		font-weight: 600
+		color: #000
+	&-subitem
+		color: #787878
+
+ul.text-advantages
+	li
+		margin-bottom: 27px
+		padding-left: 20px
+		&::before
+			content: ''
+			display: block
+			width: 6px
+			height: 6px
+			position: absolute
+			left: 0
+			top: 7px
+			background: $accent-color
+			z-index: 0
+
+ol.text-advantages
+	list-style: none
+	counter-reset: li
+	li
+		margin-bottom: 26px
+		padding-left: 42px
+		&::before
+			counter-increment: li
+			content: counter(li, decimal)
+			display: block
+			width: 30px
+			height: 30px
+			text-align: center
+			font-size: 14px
+			font-weight: 700
+			line-height: 30px
+			color: #f5f5f5
+			position: absolute
+			left: 0
+			top: -3px
+			background: $accent-color
+			z-index: 0
+	
+.text-call
+	margin-top: 42px
+	padding: 49px 60px 55px
+	background: url('../img/text-bg.jpg') no-repeat
+	&-title
+		font-size: 24px
+		font-weight: 700
+		color: #f5f5f5
+	.text-call-btn
+		margin-top: 19px
+		padding: 9px 30px
+
+.text-form
+	padding-top: 28px
+	.mb-30
+		margin-bottom: 30px
+
+.form-select-block
+	margin-top: 48px
+
+
+
+.form-file
+	margin-top: 30px
+.form-file-title
+	color: #292424
+	font-size: 18px
+	font-weight: 700
+	line-height: 18px
+.thumbnails
+	margin-top: 25px
+.files-fake
+	position: relative
+	width: 270px
+	display: flex
+	align-items: center
+	border: 1px solid #d5d5d5
+	background-image: linear-gradient(to top, #bcbcbc 0%, #ffffff 100%)
+.form-file-btn
+	display: inline-block
+	width: 130px
+	height: 40px
+	background: #fff
+	color: #292424
+	font-family: "Open Sans"
+	font-size: 12px
+	font-weight: 400
+	line-height: 40px
+	text-align: center
+.file-msg
+	display: inline-block
+	width: 130px
+	height: 40px
+	color: #292424
+	font-family: Verdana, sans-serif
+	font-size: 12px
+	font-weight: 400
+	line-height: 40px
+	text-align: center
+
+.form-file-inner
+	margin-top: 20px
+	display: flex
+	align-items: center
+.form-file-info
+	margin-left: 20px
+	color: #8c8c8c
+	font-size: 14px
+	font-weight: 400
+	line-height: 24px
+
+.form-file-info-ic
+	display: inline-block
+	width: 24px
+	height: 24px
+	margin-right: 8px
+	background-image: linear-gradient(to top, #bcbcbc 0%, #ffffff 100%)
+	text-align: center
+	color: #888888
+	font-size: 14px
+	line-height: 24px
+	font-weight: 700
+.thumbnails
+	img
+		display: inline-block
+		margin-right: 20px
+		position: relative
+		&::before
+			content: ''
+			display: block
+			width: 20px
+			height: 20px
+			position: absolute
+			right: 0
+			top: 0
+			background: url('../img/icons/close.png') no-repeat 50% 50%
+			z-index: 0
+
+
+.form-file-input
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	cursor: pointer
+	opacity: 0
+
+
+
+
+
+h1
+	margin-bottom: .1em
+	font-size: 1.5rem
+	letter-spacing: -.5px
 h2
 	font-size: 1.125rem
 	line-height: 1.9
 h3
 	line-height: 1.9
+h4
+	font-size: .875rem	
+.content
+	h3
+		font-size: 1rem
+
+
+
+
+
+
+
+
 
 .section__inner
 	position: relative
@@ -104,9 +361,10 @@ h3
 		cursor: pointer
 		background: darken($accent-color, 5%)
 		transition: all .2s
-	&:focus
-		outline: none
-		box-shadow: 1px 1px 3px rgba($accent-color, .5)
+	&:not(.form-btn)
+		&:focus
+			outline: none
+			box-shadow: 1px 1px 3px rgba($accent-color, .5)
 	&:active
 		transform: translate(1px, 1px)
 		transition: all .2s
@@ -225,6 +483,14 @@ h3
 		transform-origin: 50% 50%
 
 
+
+
+
+
+
+
+
+
 /* ----- forms ----- */
 .forms
 	&__title
@@ -246,6 +512,11 @@ h3
 		font-weight: 400
 		border: 1px solid #d5d5d5
 		background-color: #fafafa
+		&--long
+			max-width: 608px
+		&--short
+			max-width: 304px
+			padding: 5px 30px 5px 17px
 		&:focus
 			box-shadow: inset 0 0 5px rgba(0,0,0, 0.15)
 			transition: all .2s
@@ -254,7 +525,31 @@ h3
 		&::placeholder
 			font-size: 14px
 			font-weight: 300
-			color: #adadad
+			color: #3a3a3a
+	&-area
+		width: 100%
+		padding: 23px 30px 5px 13px
+		font: 14px $default-font
+		border: 1px solid #d5d5d5
+		background-color: #fafafa
+		color: #000
+		resize: none
+		outline: none
+		&--short
+			max-width: 608px
+			height: 151px
+		&--long
+			height: 200px
+		&:focus
+			box-shadow: inset 0 0 5px rgba(0,0,0, 0.15)
+			transition: all .2s
+			&::placeholder
+				color: #000
+		&::placeholder
+			font-size: 14px
+			font-weight: 300
+			color: #3a3a3a
+
 	&-btn
 		display: inline-block
 		width: auto
@@ -265,6 +560,17 @@ h3
 			&:hover
 				background-color: rgba(#3a3a3a, .3)
 				transition: all .2s
+	&-status
+		&-text
+			display: inline-block
+			width: 100%
+			margin: 0
+			font: 14px $default-font
+		&-positive
+			color: #7eb105
+		&-negative
+			color: #d73127
+
 
 	&-footer
 		margin-top: 32px
@@ -285,10 +591,168 @@ h3
 		top: 5px
 		left: 13px
 		display: inline-block
-		color: #5b5b5b
+		color: #828282
 		font-size: 12px
 		font-weight: 300
 		line-height: 18px
+
+
+
+.checkbox-group
+	margin-top: 44px
+.checkbox 
+	margin-bottom: 24px
+	cursor: pointer
+	vertical-align: top
+	font-size: 0
+	display: flex
+
+	.checkbox-hidden
+		display: none
+
+	.checkbox-wrap
+		display: inline-block
+		vertical-align: middle
+		width: 32px
+		height: 32px
+		box-sizing: border-box
+		flex: 0 0 32px
+
+	input:not(:checked)
+		+ .checkbox-wrap
+			.checkbox-pseudo
+				border-color: #d5d5d5
+				background-color: #fafafa
+
+	.checkbox-pseudo
+		display: block
+		width: 100%
+		height: 100%
+		border: 1px solid #d5d5d5
+		box-sizing: border-box
+		background-color: #fff
+		position: relative
+		transition: background .2s ease-out,border .2s ease-out
+
+	.checkbox-check 
+		position: absolute
+		top: 9px
+		left: 7px
+		stroke: #fff
+		stroke-dasharray: 19px
+		stroke-dashoffset: 19px
+		transition: .2s ease-out
+
+	.checkbox-text
+		display: inline-block
+		vertical-align: middle
+		color: #000
+		font-family: $default-font
+		font-size: 14px
+		line-height: 32px
+		margin-left: 8px
+		a 
+			color: inherit
+			text-decoration: underline
+
+.checkbox 
+	input[type=checkbox]
+		&:checked
+			+ .checkbox-wrap
+				.checkbox-pseudo
+					.checkbox-check
+						stroke-dashoffset: 38px
+			
+.checkbox 
+	input[type=checkbox]
+		&:checked
+			+ .checkbox-wrap
+				.checkbox-pseudo
+					background-color: $accent-color
+					border-color: $accent-color
+
+.cd-checkbox
+	&:hover 
+		.checkbox-text
+			color: #199b40
+
+
+
+[type="radio"]
+	display: none
+
+.form-radio-block
+	margin-top: 42px
+
+	[type="radio"]
+		&:checked
+			+ .form-radio-label
+				&::before
+					border-color: $accent-color
+					transition: all .2s
+				&::after
+					opacity: 1
+					transition: all .2s
+
+.form-radio-title
+	font-size: 14px
+	color: #000
+.form-radio-list
+	margin-top: 10px
+	display: inline-flex
+	padding: 10px 20px
+	border: 1px solid #d5d5d5
+	background: #fafafa
+	li
+		width: 73px
+.form-radio-label
+	display: block
+	position: relative
+	padding-left: 38px
+	&::before, &::after
+		content: ''
+		display: block
+		position: absolute
+		z-index: 0
+		transition: all .2s
+	&::before
+		width: 24px
+		height: 24px
+		left: 0
+		top: 0
+		margin-top: 2.5px
+		border: 1px solid #d5d5d5
+		background-color: #fafafa
+	&::after
+		width: 16px
+		height: 16px
+		left: 4px
+		top: 7px
+		background-color: $accent-color
+		opacity: 0
+	&:hover
+		cursor: pointer
+		.form__delivery-descr
+			color: $table-accent-color
+			transition: all .2s
+		
+.form-radio-descr
+	font-size: 18px
+	font-weight: 700
+	color: #000
+	transition: all .2s
+
+.form-btn-group
+	margin-top: 70px
+
+
+
+
+
+
+
+
+
 
 
 /*----- simplebar plugin -----*/
@@ -372,23 +836,42 @@ h3
 		display: none
 
 
+
+
+
+
+
+
+
 /* ----- Custom select ----- */
-.my-select-wrapper
+.form-select-label
+	width: 304px
+	.form-hint
+		left: 21px
+.select-wrapper
 	position: relative
 	user-select: none
 	select
 		display: none
 
-.table-filter-select
+.select
+	height: 50px
 	position: relative
 
-.my-select-trigger
+.select-trigger
 	position: relative
-	display: flex
-	align-items: center
-	color: #787878
+	display: inline-block
+	width: 100%
+	height: 50px
+	padding: 20px 25px 0 20px
+	color: #3a3a3a
 	background: #fafafa
+	border: 1px solid #d5d5d5
+	font-size: 14px
+	white-space: nowrap
+	overflow: hidden
 	cursor: pointer
+	text-overflow: ellipsis
 	&:after
 		position: absolute
 		display: block
@@ -402,20 +885,22 @@ h3
 		transition: all .2s ease-in-out
 		transform-origin: 50% 50%
 
-.table-filter-select.opened .my-select-trigger:after
+.select.opened .select-trigger
+	border-color: $accent-color
+.select.opened .select-trigger:after
 	margin-top: -1px
 	transform: rotate(0) translateY(-50%)
 
-.my-options
+.select-options
 	position: absolute
 	display: block
 	top: 100%
 	left: 0
 	right: 0
 	min-width: 100%
-	margin: 15px 0
-	border: 1px solid #d5d5d5
-	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.07)
+	margin: 0
+	border: 1px solid $accent-color
+	border-top: none
 	background: #fafafa
 	transition: all .2s ease-in-out
 	opacity: 0
@@ -424,26 +909,23 @@ h3
 	transform: translateY(-15px)
 	z-index: 1
 
-.table-filter-select.opened .my-options
+.select.opened .select-options
 	opacity: 1
 	visibility: visible
 	pointer-events: all
 	transform: translateY(0)
 
-.my-option
+.select-option
 	position: relative
 	display: block
 	padding: 9px 20px
-	border-bottom: 1px solid #d5d5d5
-	font: 12px sans-serif
-	color: #787878
+	font: 14px $default-font
+	color: #3a3a3a
 	cursor: pointer
 	transition: all .1s ease-in-out
-	&:last-of-type
-		border-bottom: 0
 	&:hover, &.selection
-		background: #303030
-		color: #fafafa
+		background: transparent
+		color: $accent-color
 
 
 
@@ -452,6 +934,8 @@ h3
 /* ----- x ----- */
 .ml-auto
 	margin-left: auto
+.mt-50
+	margin-top: 50px
 .p-static
 	position: static
 	
@@ -532,7 +1016,7 @@ h3
 			width: 40px
 			height: 40px
 			border: 1px solid #b5b5b5
-			margin-right: -1px
+			margin-left: -1px
 			transition: all .2s
 			&:hover
 				background-color: rgba(#fff, .2)
@@ -661,6 +1145,11 @@ h3
 			height: 24px
 			margin-right: 20px
 			background: url('../img/icons/cart.svg') no-repeat 50% 50%
+			&-mob
+				display: none
+			&:hover
+				cursor: pointer
+				
 		&-quantity, &-price
 			font-size: 14px
 			line-height: 1.72
@@ -676,6 +1165,7 @@ h3
 			text-transform: uppercase
 		&-btn
 			display: none
+			width: 150px
 
 	/* ----- login ----- */
 	&__login
@@ -984,8 +1474,10 @@ h3
 		padding-bottom: 6px
 	&__items
 		margin-top: 30px
-		border: 1px solid #d5d5d5
+		border-top: 1px solid #d5d5d5
+		border-left: 1px solid #d5d5d5
 		border-bottom: none
+
 
 	&__item
 		height: 100px
@@ -994,53 +1486,62 @@ h3
 		justify-content: center
 		border-right: 1px solid #d5d5d5
 		border-bottom: 1px solid #d5d5d5
-		&:nth-child(6n)
-			border-right: none
-	&__logo
-		width: 100px
-		height: 80px
-		background-image: url('../img/brands/brands.png') 
-		background-repeat: no-repeat
-		&:hover
-			background-image: url('../img/brands/brands-active.png')
-			
-		&-1
-			background-position: -14px -22px // acura
-		&-2
-			background-position: -214px -20px // alfa
-		&-3
-			background-position: -419px -20px // audi
-		&-4
-			background-position: -621px -20px // bmw
-		&-5
-			background-position: -824px -23px // cadillac
-		&-6
-			background-position: -1025px -23px //chery
-		&-7	
-			background-position: -14px -127px // chevrolet
-		&-8
-			background-position: -213px -124px // chrysler
-		&-9
-			background-position: -418px -122px // citroen
-		&-10
-			background-position: -621px -122px // daewoo
-		&-11
-			background-position: -824px -125px //dodge
-		&-12
-			background-position: -1025px -118px // fiat
-		&-13
-			background-position: -14px -227px // ford
-		&-14
-			background-position: -216px -224px // geely
-		&-15
-			background-position: -419px -227px // great wall
-		&-16
-			background-position: -619px -227px // honda
-		&-17
-			background-position: -822px -226px // hyundai
-		&-18
-			background-position: -1027px -225px // infinity
+		&-show
+			display: flex!important
 
+		.img-responsive
+			max-height: 100%
+		.js-img-hide
+			display: none
+		
+	// &__logo
+	// 	width: 100px
+	// 	height: 80px
+	// 	background-image: url('../img/brands/brands.png') 
+	// 	background-repeat: no-repeat
+	// 	&:hover
+	// 		background-image: url('../img/brands/brands-active.png')
+			
+	// 	&-1
+	// 		background-position: -14px -22px // acura
+	// 	&-2
+	// 		background-position: -214px -20px // alfa
+	// 	&-3
+	// 		background-position: -419px -20px // audi
+	// 	&-4
+	// 		background-position: -621px -20px // bmw
+	// 	&-5
+	// 		background-position: -824px -23px // cadillac
+	// 	&-6
+	// 		background-position: -1025px -23px //chery
+	// 	&-7	
+	// 		background-position: -14px -127px // chevrolet
+	// 	&-8
+	// 		background-position: -213px -124px // chrysler
+	// 	&-9
+	// 		background-position: -418px -122px // citroen
+	// 	&-10
+	// 		background-position: -621px -122px // daewoo
+	// 	&-11
+	// 		background-position: -824px -125px //dodge
+	// 	&-12
+	// 		background-position: -1025px -118px // fiat
+	// 	&-13
+	// 		background-position: -14px -227px // ford
+	// 	&-14
+	// 		background-position: -216px -224px // geely
+	// 	&-15
+	// 		background-position: -419px -227px // great wall
+	// 	&-16
+	// 		background-position: -619px -227px // honda
+	// 	&-17
+	// 		background-position: -822px -226px // hyundai
+	// 	&-18
+	// 		background-position: -1027px -225px // infinity
+
+	
+.brands__item-hide-desktops
+	display: none
 
 
 /* ------------------------------------- 
@@ -1584,7 +2085,6 @@ h3
 		[type="radio"]
 			width: auto
 			margin: 0
-			display: none
 			&:checked
 				+ .form__delivery-label
 					&::before
@@ -2348,7 +2848,7 @@ h3
 		border: solid 1px #d5d5d5
 	&__optionProduct li
 		font-size: 14px
-		color: #929292
+		color: $table-accent-color
 		padding: 9px 20px
 		font-weight: 600
 		transition: all .2s
@@ -2442,7 +2942,7 @@ h3
 		td
 			height: .332em
 			padding: 0 30px
-			color: #929292
+			color: #3a3a3a
 			font-size: 14px
 			font-weight: 400
 			line-height: 30px
@@ -2464,7 +2964,7 @@ h3
 		td
 			&:nth-child(3)
 				text-align: left
-			&:first-child
+			&:first-child, &:nth-child(2)
 				color: #3a3a3a
 			&:nth-child(10), &:last-child
 				padding: 0 20px
@@ -2495,16 +2995,19 @@ h3
 	margin-top: 30px
 	display: flex
 	justify-content: flex-end
-	.my-select-wrapper
+	.select-wrapper
 		width: 188px
 		height: 40px
-	.table-filter-select
+	.select
 		font: 400 12px/24px "Open Sans"
-	.my-select-trigger
+	.select-trigger
 		width: 100%
 		height: 40px
-		padding: 0 20px
+		padding: 8px 20px
+		font-size: 12px
 		border: 1px solid #d5d5d5	
+	.select-option
+		font-size: 12px
 
 
 .table-card
@@ -2541,14 +3044,28 @@ h3
 	&-next
 		transform: rotate(-45deg)
 
-	.my-select-wrapper
+
+	.select-wrapper
 		width: 80%
-	.table-filter-select
+	.select
 		font: 700 14px "Open Sans"
-	.my-select-trigger
+	.select-trigger
 		display: inline-block
-		padding-right: 40px
+		width: auto
+		padding: 0 40px 0 0
 		color: #303030
+		border: none
+		height: auto
+		font-size: 14px
+	.select-options
+		margin-top: 15px
+		border: none
+	.select-option
+		font-size: 12px
+		border-bottom: 1px solid #d5d5d5
+		&:hover, &.selection
+			background: #303030
+			color: #fafafa
 
 	table
 		width: 100%
@@ -2690,6 +3207,8 @@ h3
 			background-color: #f5f5f5
 			border: 1px solid #e5e5e5
 			transition: all .1s
+			&:first-child
+				color: #3a3a3a
 
 	.add-ic
 		display: inline-block

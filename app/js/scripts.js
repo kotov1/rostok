@@ -22,15 +22,15 @@ $(function() {
 
 
 	function bodyOverlay(val) {
-		if(val) { $('body').addClass('modal-active') }
-		else { $('body').removeClass('modal-active') }
-	};
+		if(val) { $('body').addClass('modal-active'); }
+		else { $('body').removeClass('modal-active'); }
+	}
 
 	function closeModal() {
 		$('.modal.reveal').removeClass('reveal');
 		$('.reveal').removeClass('reveal');
 		$('.modal').closest('.opened').removeClass('opened');
-	};
+	}
 
 	// закрытие модальных окон по клику за их пределами
 	$(document).click(function (e){
@@ -51,7 +51,7 @@ $(function() {
 			bodyOverlay(true);
 		} else{
 			bodyOverlay(false);
-		};
+		}
 	});
 
 	// мобильное меню - закрытие по клику на ссылку
@@ -93,17 +93,21 @@ $(function() {
 	//  всплывающее окно корзины на мобильных устройствах
 	$('.header__cart-ic').click(function() {
 
-		if ( $('.header__cart').hasClass('opened') ) {
-			closeModal();
-			$(this).next('.header__cart-box').removeClass('reveal');
-			$(this).parent('.header__cart').removeClass('opened');
-			bodyOverlay(false);
-		}
-		else {
-			closeModal();
-			$(this).next('.header__cart-box').addClass('reveal');
-			$(this).parent('.header__cart').addClass('opened');
-			bodyOverlay(true);
+		if ( $(window).width() < 768 ) {
+
+			if ( $('.header__cart').hasClass('opened') ) {
+				closeModal();
+				$(this).next('.header__cart-box').removeClass('reveal');
+				$(this).parent('.header__cart').removeClass('opened');
+				bodyOverlay(false);
+			}
+			else {
+				closeModal();
+				$(this).next('.header__cart-box').addClass('reveal');
+				$(this).parent('.header__cart').addClass('opened');
+				bodyOverlay(true);
+			}
+
 		}
 
 	});
@@ -162,7 +166,7 @@ $(function() {
 						event.preventDefault();
 					}
 
-				};
+				}
 
 			});
 
@@ -174,7 +178,7 @@ $(function() {
 				}
 			});
 			
-	};
+	}
 
 
 
@@ -244,7 +248,7 @@ $(function() {
 				$(this).closest('.footer-title').next('ul').slideToggle();
 			}
 		});
-		};
+		}
 	};
 	$(document).ready(function() {
 			footerLinksToggle();
@@ -277,7 +281,7 @@ $(function() {
 	// подсказка о добавлении товара в корзину
 	$('.table-addCart').click(function() {
 		$('.table-purchase').addClass('show');
-		setTimeout(function() { $('.table-purchase').removeClass('show') }, 1500);
+		setTimeout(function() { $('.table-purchase').removeClass('show'); }, 1500);
 	});
 
 
@@ -321,40 +325,40 @@ $(function() {
 
 
 	// Custom select
-	$(".table-filter-select").each(function() {
+	$(".select").each(function() {
 		var classes = $(this).attr("class"),
 				id      = $(this).attr("id"),
 				name    = $(this).attr("name");
 		var template =  '<div class="' + classes + '">';
-				template += '<span class="my-select-trigger">' + $(this).attr("placeholder") + '</span>';
-				template += '<div class="my-options">';
+				template += '<span class="select-trigger">' + $(this).attr("placeholder") + '</span>';
+				template += '<div class="select-options">';
 				$(this).find("option").each(function() {
-					template += '<span class="my-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+					template += '<span class="select-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
 				});
 		template += '</div></div>';
 		
-		$(this).wrap('<div class="my-select-wrapper"></div>');
+		$(this).wrap('<div class="select-wrapper"></div>');
 		$(this).after(template);
 	});
-	$(".my-option:first-of-type").hover(function() {
-		$(this).parents(".my-options").addClass("option-hover");
+	$(".select-option:first-of-type").hover(function() {
+		$(this).parents(".select-options").addClass("option-hover");
 	}, function() {
-		$(this).parents(".my-options").removeClass("option-hover");
+		$(this).parents(".select-options").removeClass("option-hover");
 	});
-	$(".my-select-trigger").on("click", function(event) {
-		$(".table-filter-selectt").removeClass("opened");
+	$(".select-trigger").on("click", function(event) {
+		$(".select").removeClass("opened");
 		$('html').one('click',function() {
-			$(".table-filter-select").removeClass("opened");
+			$(".select").removeClass("opened");
 		});
-		$(this).parents(".table-filter-select").toggleClass("opened");
+		$(this).parents(".select").toggleClass("opened");
 		event.stopPropagation();
 	});
-	$(".my-option").on("click", function() {
-		$(this).parents(".my-select-wrapper").find("select").val($(this).data("value"));
-		$(this).parents(".my-options").find(".my-option").removeClass("selection");
+	$(".select-option").on("click", function() {
+		$(this).parents(".select-wrapper").find("select").val($(this).data("value"));
+		$(this).parents(".select-options").find(".select-option").removeClass("selection");
 		$(this).addClass("selection");
-		$(this).parents(".table-filter-select").removeClass("opened");
-		$(this).parents(".table-filter-select").find(".my-select-trigger").text($(this).text());
+		$(this).parents(".select").removeClass("opened");
+		$(this).parents(".select").find(".select-trigger").text($(this).text());
 	});
 
 
@@ -376,6 +380,49 @@ $(function() {
 
 
 
+	$('.text-call-btn').click(function(event) {
+		$('body,html').animate({scrollTop: ($('.content__title-form').offset().top) - 100}, 1000);
+		event.preventDefault();
+	});
+
+
+
+
+
+	// drag and drop area
+	var $fileInput = $('.form-file-input');
+	// change inner text
+	$fileInput.on('change', function() {
+		var filesCount = $(this)[0].files.length;
+		var $textContainer = $('.file-msg');
+
+		if (filesCount === 1) {
+			// if single file is selected, show file name
+			var fileName = $(this).val().split('\\').pop();
+			$textContainer.text(fileName);
+		} else {
+			// otherwise show number of files
+			$textContainer.text(filesCount + ' файла(ов)');
+		}
+	});
+
+
+	//  открытие невидимых логотипов автомобильных брендов на главной странице
+	$('.js-open-hidden-logos').click(function (e) { 
+		e.preventDefault();
+		$('.brands__item-hide').removeClass('brands__item-hidden');
+		$('.brands__item-hide').addClass('brands__item-show');
+	});
+
+	// подмена логотипа бренда автомобиля при наведении
+	$('.brands__item').hover(function () {
+			$(this).children('img').hide();
+			$(this).children('.js-img-hide').show();
+		}, function () {
+			$(this).children('.js-img-hide').hide();
+			$(this).children('img').not('.js-img-hide').show();
+		}
+	);
 
 
 

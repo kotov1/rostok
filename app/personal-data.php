@@ -89,6 +89,10 @@
 									<input type="password" class="form-input" name="password-confirm" required>
 									<small class="form-hint">Повторите пароль</small>
 								</label>
+								<div class="form-status">
+									<span class="form-status-text form-status-positive">Форма успешно отправлена</span>
+									<span class="form-status-text form-status-negative">Поле заполнено некорректно</span>
+								</div>
 								<div class="form-footer">
 									<input type="submit" class="btn form-btn" value="Сохранить">
 								</div>

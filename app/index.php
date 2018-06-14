@@ -140,81 +140,175 @@
 					<div class="brands__items row no-gutters">
 	
 						<a href="#" class="brands__item col-6 col-md-3 col-lg-2">
-							<div class="brands__logo brands__logo-1"></div>
+							<img src="img/brands/acura.png" alt="brand" class="img-responsive">
+							<img src="img/brands/acura-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
 						<a href="#" class="brands__item col-6 col-md-3 col-lg-2">
-							<div class="brands__logo brands__logo-2"></div>
+							<img src="img/brands/alfa.png" alt="brand" class="img-responsive">
+							<img src="img/brands/alfa-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
 						<a href="#" class="brands__item col-6 col-md-3 col-lg-2">
-							<div class="brands__logo brands__logo-3"></div>
+							<img src="img/brands/audi.png" alt="brand" class="img-responsive">
+							<img src="img/brands/audi-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
 						<a href="#" class="brands__item col-6 col-md-3 col-lg-2">
-							<div class="brands__logo brands__logo-4"></div>
+							<img src="img/brands/bmw.png" alt="brand" class="img-responsive">
+							<img src="img/brands/bmw-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
 						<a href="#" class="brands__item col-6 col-md-3 col-lg-2">
-							<div class="brands__logo brands__logo-5"></div>
+							<img src="img/brands/cadillac.png" alt="brand" class="img-responsive">
+							<img src="img/brands/cadillac-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
 						<a href="#" class="brands__item col-6 col-md-3 col-lg-2">
-							<div class="brands__logo brands__logo-6"></div>
+							<img src="img/brands/chery.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chery-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
 						<a href="#" class="brands__item col-6 col-md-3 col-lg-2">
-							<div class="brands__logo brands__logo-7"></div>
+							<img src="img/brands/chevrolet.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chevrolet-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
 						<a href="#" class="brands__item col-6 col-md-3 col-lg-2">
-							<div class="brands__logo brands__logo-8"></div>
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<div class="more-box"><a href="#" class="more-link js-open-hidden-logos">Показать все марки</a></div>
+	
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-phones">
+							<img src="img/brands/citroen.png" alt="brand" class="img-responsive">
+							<img src="img/brands/citroen-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
-						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 phone-hide">
-							<div class="brands__logo brands__logo-9"></div>
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-phones">
+							<img src="img/brands/daewoo.png" alt="brand" class="img-responsive">
+							<img src="img/brands/daewoo-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
-						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 phone-hide">
-							<div class="brands__logo brands__logo-10"></div>
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-phones">
+							<img src="img/brands/dodge.png" alt="brand" class="img-responsive">
+							<img src="img/brands/dodge-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
-						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 phone-hide">
-							<div class="brands__logo brands__logo-11"></div>
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-phones">
+							<img src="img/brands/fiat.png" alt="brand" class="img-responsive">
+							<img src="img/brands/fiat-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
-						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 phone-hide">
-							<div class="brands__logo brands__logo-12"></div>
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-phones">
+							<img src="img/brands/ford.png" alt="brand" class="img-responsive">
+							<img src="img/brands/ford-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
-						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 phone-hide">
-							<div class="brands__logo brands__logo-13"></div>
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-phones">
+							<img src="img/brands/geely.png" alt="brand" class="img-responsive">
+							<img src="img/brands/geely-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
-						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 phone-hide">
-							<div class="brands__logo brands__logo-14"></div>
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-phones">
+							<img src="img/brands/great-wall.png" alt="brand" class="img-responsive">
+							<img src="img/brands/great-wall-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
-						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 phone-hide">
-							<div class="brands__logo brands__logo-15"></div>
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-phones">
+							<img src="img/brands/honda.png" alt="brand" class="img-responsive">
+							<img src="img/brands/honda-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
-						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 phone-hide">
-							<div class="brands__logo brands__logo-16"></div>
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/hyundai.png" alt="brand" class="img-responsive">
+							<img src="img/brands/hyundai-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 	
-						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 tablet-hide">
-							<div class="brands__logo brands__logo-17"></div>
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/infiniti.png" alt="brand" class="img-responsive">
+							<img src="img/brands/infiniti-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
-	
-						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 tablet-hide">
-							<div class="brands__logo brands__logo-18"></div>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-tablets">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-desktops">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
+						</a>
+
+						<a href="#" class="brands__item col-6 col-md-3 col-lg-2 brands__item-hide brands__item-hide-desktops">
+							<img src="img/brands/chrysler.png" alt="brand" class="img-responsive">
+							<img src="img/brands/chrysler-active.png" alt="brand" class="img-responsive js-img-hide">
 						</a>
 						
 					</div>
 					<!-- /.brands__items -->
 	
-					<div class="more-box"><a href="#" class="more-link">Показать все марки</a></div>
+					
+
+					<!-- hidden logos -->
+					<!-- <div class="brands__items brands__items-hidden row no-gutters">
+					</div> -->
 	
 				</div>
 				<!-- /.section__inner -->
